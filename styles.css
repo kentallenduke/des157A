@@ -9,7 +9,7 @@ body {
 }
 
 h1 {
-    font-size:18pt;
+    font-size:16pt;
     font-weight:800;
     color:#3D3846
     
@@ -27,7 +27,8 @@ p, a{
 }
 
 a {
-    color:#3584E4
+    color:#3584E4;
+ 
 }
 
 footer{
@@ -80,11 +81,7 @@ section.lab {
     transform: translateY(-30%);
 }
 
-.github ul {
-    list-style:none;
-    width:20%;
-    
-}
+
 .course-header h2 {
     font-size:10pt;
     width:50%;
@@ -94,10 +91,11 @@ section.lab {
     
 }
 
-.logo img {
-    
-    padding:30px 0 0 60px;
-    
+.logo {
+   display:flex;
+   padding:30px 30px 0 60px;
+   align-items:center;
+   justify-content: space-between;
 }
 
 .introduction {
@@ -108,9 +106,7 @@ section.lab {
     
 }
 
-.studio.card {
-  
-}
+
 
 .bolder {
     font-weight: 1800;   
@@ -131,7 +127,7 @@ section.lab {
 @media (min-width:650px) {
     #card-expo
     {
-        grid-template-columns: 1fr 1fr !important;
+        grid-template-columns: 1fr 1fr;
     }
     footer {
         grid-template-columns: 1fr 1fr 2fr;
@@ -146,8 +142,9 @@ section.lab {
     #card-expo
     {
        
-        grid-template-columns: 0.2fr 0.2fr 0.2fr  !important;
-        grid-gap: 60px;
+        grid-template-columns: 0.5fr 0.5fr 0.5fr ;
+        align-items:top;
+        /*grid-gap: 60px;*/
         
 
     }
