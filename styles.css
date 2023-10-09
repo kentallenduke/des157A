@@ -1,0 +1,172 @@
+/* Global - Affects entire web page */
+
+body {
+    font-family:Montserrat, Verdana, sans-serif;
+    letter-spacing:-0.5px;
+    background-color:#F6F5F4;
+    margin:auto;
+   
+}
+
+h1 {
+    font-size:18pt;
+    font-weight:800;
+    color:#3D3846
+    
+}
+
+h2{
+    font-size:16pt;
+    font-weight:700;
+    color:#3D3846
+}
+
+p, a{
+    font-size:12pt;
+    font-weight:500;
+}
+
+a {
+    color:#3584E4
+}
+
+footer{
+    color:white;
+    background-color:black;
+    text-align: center;
+    padding: 10px;
+    display: grid;
+}
+section {
+    padding: 1px;
+}
+section.lab {
+  background: repeating-linear-gradient(
+  65deg,
+  #F8F8F8,
+  #F8F8F8 40px,
+  #EBEBEB 40px,
+  #EBEBEB 80px
+);
+    border-radius: 0 0 10px 10px;
+}
+/* Home page */
+
+/*header*/
+
+.course-header{
+    color:white;
+    
+}
+
+#banner-bg{
+    background-color:#2ec27e;
+    height:248px;
+    
+}
+.studio-heading h2 {
+     display: inline;
+}
+.welcome img {
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width:100%;
+    padding-bottom:20px;
+}
+
+.heading h2 {
+    display: inline-block;
+    transform: translateY(-30%);
+}
+
+.github ul {
+    list-style:none;
+    width:20%;
+    
+}
+.course-header h2 {
+    font-size:10pt;
+    width:50%;
+    margin:auto;
+    text-align:center;
+    color:white;
+    
+}
+
+.logo img {
+    
+    padding:30px 0 0 60px;
+    
+}
+
+.introduction {
+    text-align:center;
+    width:90%;
+    margin:auto;
+   
+    
+}
+
+.studio.card {
+  
+}
+
+.bolder {
+    font-weight: 1800;   
+    -webkit-text-stroke-width: thin;
+}
+/*cards*/
+
+#card-expo
+{
+    
+    display: grid;
+    width: 100%;
+    justify-items: center;
+    /*grid-template-columns: 1fr;*/
+    
+}
+
+@media (min-width:650px) {
+    #card-expo
+    {
+        grid-template-columns: 1fr 1fr !important;
+    }
+    footer {
+        grid-template-columns: 1fr 1fr 2fr;
+    }
+    .socials {
+        text-align: left;
+    }
+    
+}
+
+@media (min-width:900px) {
+    #card-expo
+    {
+       
+        grid-template-columns: 0.2fr 0.2fr 0.2fr  !important;
+        grid-gap: 60px;
+        
+
+    }
+    footer {
+        grid-template-columns: 1fr 1fr 2fr;
+      }
+        .socials {
+        text-align: left;
+    }
+}
+.card {
+    background:white;
+    width: 250px;
+    margin-top:4px;
+    margin-bottom:26px;
+    /*! padding:20px; */
+    border-radius:20px;
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.1);
+    border:1px solid #E4E4E4;
+    line-height:1.5;
+    font-weight:500
+}
