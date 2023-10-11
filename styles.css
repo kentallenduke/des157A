@@ -28,8 +28,24 @@ p, a{
 
 a {
     color:#3584E4;
+    text-decoration:none;
+    transition: all 0.2s ease-in;
  
 }
+
+a:hover{
+    color:#0B4387;
+    text-decoration:underline;
+     transition: all 0.1s ease-in;
+}
+
+a:active{
+    color:#7039C9;
+    text-decoration:underline;
+     transition: all 0.1s ease-in;
+}
+
+
 
 footer{
     color:white;
@@ -55,6 +71,11 @@ section.lab {
 
 /*header*/
 
+.heading{
+  display:flex;
+    gap: 10px;
+}
+
 .course-header{
     color:white;
     
@@ -63,22 +84,59 @@ section.lab {
 #banner-bg{
     background-color:#2ec27e;
     height:248px;
-    
+    background-image:url("images/header-icongrid.png");
+    background-repeat:no-repeat;
+    background-size:cover;    
+    transition: 1s all;
 }
-.studio-heading h2 {
-     display: inline;
+
+
+
+
+.welcome {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content:center;
 }
+
 .welcome img {
-    display:block;
-    margin-left:auto;
-    margin-right:auto;
-    width:100%;
+    display:inline-block;
     padding-bottom:20px;
+  padding-top:20px;
+}
+
+.welcome h1 {
+    display: inline-block;
+    font-size: 30pt;
+    color:white;
+}
+
+.welcome img:hover {
+    animation: 0.5s infinite alternate wave;
+   
+}
+
+@keyframes wave {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(90deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.heading img {
+    display: inline-block;
+    padding: 15px;
+   
 }
 
 .heading h2 {
     display: inline-block;
-    transform: translateY(-30%);
 }
 
 
@@ -93,7 +151,7 @@ section.lab {
 
 .logo {
    display:flex;
-   padding:30px 30px 0 60px;
+   padding: 30px 60px 0 60px;
    align-items:center;
    justify-content: space-between;
 }
@@ -102,6 +160,7 @@ section.lab {
     text-align:center;
     width:90%;
     margin:auto;
+    padding:12px;
    
     
 }
@@ -116,45 +175,26 @@ section.lab {
 
 #card-expo
 {
-    
+   
     display: grid;
     width: 100%;
     justify-items: center;
+    max-width: 1080px;
+    margin: auto;
     /*grid-template-columns: 1fr;*/
+    padding-bottom:20px;
     
 }
 
-@media (min-width:650px) {
-    #card-expo
-    {
-        grid-template-columns: 1fr 1fr;
-    }
-    footer {
-        grid-template-columns: 1fr 1fr 2fr;
-    }
-    .socials {
-        text-align: left;
-    }
-    
+.socials img {
+
+  width:20px;
+  height:20px;
+  padding-right:5px;
+  padding-left:10px;
+  
 }
 
-@media (min-width:900px) {
-    #card-expo
-    {
-       
-        grid-template-columns: 0.5fr 0.5fr 0.5fr ;
-        align-items:top;
-        /*grid-gap: 60px;*/
-        
-
-    }
-    footer {
-        grid-template-columns: 1fr 1fr 2fr;
-      }
-        .socials {
-        text-align: left;
-    }
-}
 .card {
     background:white;
     width: 250px;
@@ -164,6 +204,39 @@ section.lab {
     border-radius:20px;
     box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.1);
     border:1px solid #E4E4E4;
-    line-height:1.5;
-    font-weight:500
+    line-height:1.75;
+    font-weight:500;
+    transition: box-shadow 0.4s ease-in-out;
+}
+
+
+
+.rd.card:hover, .final.card:hover, .studio.card:hover {
+        box-shadow: 0px 16px 16px 0px rgba(0,0,0,0.1);
+        transition: box-shadow 0.4s ease-in-out;
+
+}
+
+
+/* MEDIA QUERY*/
+@media (min-width:550px) {
+    #card-expo
+    {
+        grid-template-columns: 1fr 1fr;
+    }
+ 
+    
+}
+
+@media (min-width:850px) {
+    #card-expo
+    {
+       
+        grid-template-columns: 0.5fr 0.5fr 0.5fr ;
+        align-items:top;
+        /*grid-gap: 60px;*/
+        
+
+    }
+   
 }
