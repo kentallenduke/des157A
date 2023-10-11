@@ -112,6 +112,27 @@ section.lab {
     color:white;
 }
 
+
+.welcome img {
+    animation: waveauto 0.5s infinite 2;
+    
+    animation-delay:1s;
+   
+}
+
+@keyframes waveauto {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(90deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+    
+}
+
 .welcome img:hover {
     animation: 0.5s infinite alternate wave;
    
