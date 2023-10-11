@@ -114,7 +114,7 @@ section.lab {
 
 
 .welcome img {
-    animation: waveauto 0.5s infinite 2;
+    animation: waveauto 0.5s forwards 2;
     
     animation-delay:1s;
    
