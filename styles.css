@@ -168,7 +168,7 @@ section.lab {
 
 
 .bolder {
-    font-weight: 1800;   
+    font-weight: 800;   
     -webkit-text-stroke-width: thin;
 }
 /*cards*/
@@ -233,7 +233,7 @@ section.lab {
     {
        
         grid-template-columns: 0.5fr 0.5fr 0.5fr ;
-        align-items:top;
+       
         /*grid-gap: 60px;*/
         
 
