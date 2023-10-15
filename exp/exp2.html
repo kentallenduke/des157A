@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numbers guessing game</title>
+</head>
+<body>
+    <h1>Numbers guessing game</h1>
+    <p>Pick a number between 1 and 10.</p>
+    <h2>Your guesses</h2>
+    <div id="result"></div>
+    <script>
+    /* This program is a Numbers Guessing game where the player picks a number between 1 and 10 through the browser's
+     alert dialog and web page. The player has an infinite number of attempts to guess this number. If they choose the
+     right answer, the browser will display a list showing their previous guesses. It will also display the
+     right answer at the bottom, followed by a random treat the player earned by winning the game.*/
+
+        var treat=["apricot pie","matcha ice cream", "macarons","crepe cake"]; //when the player wins, they earn a dessert.
+        function randomInt(min,max){ //fucntion that returns data to be used to selent an element in the treat array.
+            return Math.floor((max-min+1)*Math.random())+min; //logic that picks out a random dessert in the treat array.
+        }
+        var choice=[1,2,3,4,5,6,7,8,9,10]; //users can pick numbers between 1-10
+        var randomVal=choice[Math.floor(Math.random()*choice.length)]; //logic to pick random number from the array and assign to variable randomVal.
+        var player=prompt('I am thinking of a number between 1 and 10. Can you guess what it is?'); // the prompt that starts the game.
+        while (player != randomVal){ // Loop that runs if the player guesses incorrectly.
+            document.getElementById('result').innerHTML += `<p>You guessed ${player}, which is <span style="color:red">WRONG</span>.</p>`; // this outputs to the score board at the end once the player wins.
+            player=prompt('Nope, not that number. Try guessing again.'); // dialog informing the player they guessed wrong
+        }
+        
+        document.getElementById('result').innerHTML += `<p>You guessed ${player}, which is <span style="color:green">CORRECT</span>. Enjoy your ${treat[randomInt(0,3)]}!</p>`; // this is displayed at the very end of the game.
+
+    </script>
+
+</body>
+</html>
