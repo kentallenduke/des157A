@@ -99,7 +99,7 @@ a:active{
 .forms-image img{
    border-radius:20px;
   max-width:800px;
-  min-width:400px;
+  min-width:100px;
   width:100%;
   
 }
