@@ -32,24 +32,60 @@
         </section>
     </header>
 
+    <script>
+
+            // When the user scrolls the page, execute myFunction
+        window.onscroll = function() {
+            myFunction()
+        };
+        
+        // Get the navbar
+        var banner = document.getElementById("banner");
+        
+        // Get the offset position of the navbar
+        var sticky = banner.offsetTop;
+        
+        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+            
+          if (window.pageYOffset >= sticky) {
+            banner.classList.add("sticky")
+          } 
+          
+          else {
+            banner.classList.remove("sticky");
+          }
+}
+        
+    </script>
+
 <section id="article-expo">
 
-    <section id="article-peak">
-        <article>
-            <div class="forms-image">
-                <p><a href="post1.html"><img src="images/form.png" alt="forms hero"></a></p>
-            </div>
-            
-            <div class="forms">
-                <time datetime="2023-10-15">OCT 15 2023</time>
-                <h1><a href="post1.html">Form and Function: Analyzing best practices for form design</a></h1>
-                <p>Getting a form's UX experience right is crucial for customer retention.  Here's why.</p>
-            </div>
-        </article>
-    </section> <!-- End of article main -->
+    <section id="featured-article">
+        <article class="featured-content">
+                <p><a href="post2.html"><img src="images/overused-overlay.png" alt="overlay-hero"></a></p>
+                <time datetime="2023-10-15">OCT 21 2023</time>
+                <h1><a href="post2.html">You are doing your overlays wrong</a></h1>
+                <p>Here are some tips to avoid common pitfalls with lightboxes and dialogs.</p>
+        </article> <!-- End of featured article content-->
+    </section> <!-- End of featured article -->
 
-
+    <section id="article-group">
+        <article class="group-content">
+            <p><a href="post1.html"><img src="images/form.png" alt="forms hero"></a></p>
+            <time datetime="2023-10-15">OCT 15 2023</time>
+            <h1><a href="post1.html">Form and Function: Analyzing best practices for form design</a></h1>
+            <p>Getting a form's user experience right is crucial for customer retention.  Here's why.</p>
+        </article> <!-- End of article group content -->
+    
+    </section> <!-- End of article group -->
 </section> <!-- End of article expo -->
+
+<footer>
+    <section id="footer-content">
+        <p> Designed by Kent Duke</p>
+    </section>
+</footer>
 
 </body>
 </html>

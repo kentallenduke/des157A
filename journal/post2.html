@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.svg">
+    <title>Journi - Form and Function</title>
+</head>
+<body>
+    <header>
+        <section id="banner">
+            <div id="banner-elements">
+                <!-- Journi logo -->
+                <div class="logo">
+                    <a href="https://kentallenduke.github.io/kent-portal/journal/index.html">
+                        <img src="images/logo.svg" alt="logo">
+                    </a>
+                    <!-- Navigation - Github --> 
+                    <a href="https://github.com/kentallenduke/kent-portal" class="github">
+                        <img src="images/github-dark.svg" alt="github" >
+                    </a>
+                </div>            
+            </div>
+        </div>
+        </section>
+    </header>
+
+        <script>
+
+            // When the user scrolls the page, execute myFunction
+        window.onscroll = function() {
+            myFunction()
+        };
+        
+        // Get the navbar
+        var banner = document.getElementById("banner");
+        
+        // Get the offset position of the navbar
+        var sticky = banner.offsetTop;
+        
+        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+            
+          if (window.pageYOffset >= sticky) {
+            banner.classList.add("sticky")
+          } 
+          
+          else {
+            banner.classList.remove("sticky");
+          }
+}
+        
+    </script>
+
+    <section id="in-article">
+        <article id="in-article-content">
+            <p><img src="images/overused-overlay.png" alt="overlays hero"></p>
+            <time datetime="2023-10-21">OCT 21 2023</time>
+            <h1>You are doing your overlays wrong</h1>
+            <p>It's no secret that popups are everywhere on the internet. With people finding themselves online every day, web developers have been taking advantage of dialogs to steal the user's focus or complete everyday tasks. As a web designer, it's important to get this part right—there's nothing more hair pulling than overlays that are implemented poorly. The good news is that there are a lot of well-researched guidelines to help you mitigate the user friction of your overlays. By learning from these resources, you can boost conversion and task completion on your website.</p> 
+            <p><a href="https://www.nngroup.com/">Nielsen Norman Group</a> has exceptional guides for many designers looking to improve their user experience—its article <em><a href="https://www.nngroup.com/articles/overuse-of-overlays/">Overuse of Overlays: How to Avoid Misusing Lightboxes</a></em> is no exception. Kathryn Whitenton talks about lightboxes and overlays found across the web while giving helpful examples of how they are overused. Lightboxes and popups are small modal windows that obscure the on-screen content; popups alert or notify the users of backend-related stuff like cookies or login, while lightboxes serve marketing purposes. They both serve the same purpose: they are overlays that grab your user's attention by covering up the main content.</p> 
+            <p>Whitenton can't blame designers for using overlays—they "want to provide quick access to important information…[it] provides more features or content without having to create a new page or modify the navigation" (Whitenton 2015). But while the common dogma of overlay user experience is to provide a close button, cover the page with a dark shade, and make its content accessible, Whitenton argues that designers may end up with a frustrating experience. To create a good overlay, designers need to look for methods to articulate the purpose, circumstances, and desired outcomes. Overlays must be effective in certain contexts—quick-and-dirty methods are not the way to insert additional content to users. By thinking about the five Ws—who, what, when, where, and why—designers are better able to determine if overlays are the right approach for its users.</p>
+            <p>As a designer, reading <em><a href="https://www.nngroup.com/articles/overuse-of-overlays/">Overuse of Overlays: How to Avoid Misusing Lightboxes</a></em> was insightful and helped me understand the do's and don'ts of overlays. While they could provide a good user experience, I'm more conscious about things to avoid when implementing them on my website. Reading Whitenton's article made me realize that the disadvantages outweigh the advantages of overlays. Even so, I know I shouldn't write them off completely. I will keep Whitenton's advice in mind and do ample user testing to see if overlays bolsters or hinders my user's engagement on my website.</p>
+            <p>Source: <em><a href="https://www.nngroup.com/articles/overuse-of-overlays/">Overuse of Overlays: How to Avoid Misusing Lightboxes</a></em> 
+        </article> <!-- End of in-article content -->
+    </section> <!-- End of in article section -->
+
+    <footer>
+        <section class="footer-content">
+            <p> Designed by Kent Duke</p>
+        </section>
+    </footer>
+</body>
+</html>
