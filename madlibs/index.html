@@ -10,6 +10,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Gaegu&family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
         <link rel="icon" type="image/x-icon" href="images/favicon.svg">
+        <script src="jquery-3.7.1.min.js"></script>
         <script src="script.js" defer></script>
         <title>Mad Libs!</title>
     </head>
@@ -38,30 +39,41 @@
             <h1>Fill in these blanks.</h1>
                 <section class="card-data">
                     <ul>
-                        <li>adjectives:</li>
-                        <li>name:</li>
-                        <li>adjectives:</li>
-                        <li>adjectives:</li>
-                        <li>food:</li>
-                        <li>food:</li>
-                        <li>noun:</li>
-                        <li>noun:</li>
-                        <li>noise:</li>
-                        <li>animal:</li>
-                        <li>adjective:</li>
+                        <li>adjectives: <input data-word="1" type=text class="word"></li>
+                        <li>name: <input data-word="2" type=text class="word"></li>
+                        <li>adjectives: <input data-word="3"type=text class="word"></li>
+                        <li>adjectives: <input data-word="4" type=text class="word"></li>
+                        <li>food: <input data-word="5" type=text class="word"></li>
+                        <li>food: <input data-word="6" type=text class="word"></li>
+                        <li>noun: <input data-word="7" type=text class="word"></li>
+                        <li>noun: <input data-word="8" type=text class="word"> </li>
+                        <li>noise: <input data-word="9" type=text class="word"> </li>
+                        <li>animal: <input data-word="10" type=text class="word"></li>
                         
                 </section>
         
         </div>
 
         <div class="cardback">
-
+                <p>
+                    Once upon a time, there was a <input data-word="1" type=text class="word"> 
+                    chicken named <input data-word="2" type=text class="word">. She lived in a <input data-word="3" type=text class="word"> 
+                    coop with her <input data-word="4" type=text class="word"> friends. One day, <input data-word="2" type=text class="word"> 
+                    decided to go for a walk. She walked until she came to a grassy field. She was so hungry, so she
+                    started to look for <input data-word="5" type=text class="word">. She found <input data-word="6" type=text class="word"> and
+                    ate it all up. She was so full, so she decided to take a nap. She fell asleep under a 
+                    <input data-word="7" type=text class="word"> tree. Suddenly, she was awakened by a loud 
+                    <input data-word="8" type=text class="word">. A big <input data-word="9" type=text class="word"> stood over her. 
+                    The <input data-word="9" type=text class="word"> was 
+                    so <input data-word="10" type=text class="word">, <input data-word="2" type=text class="word"> was scared. 
+                    She ran as fast as she could and made it home. She was tired, but very safe.
+                </p>
         </div>
 
         
     </section>
 
-    <section class="button">
+    <section class="button" id="flip">
             <div class="image-button">
                 <img src="images/flipicon.svg">
             </div> 
