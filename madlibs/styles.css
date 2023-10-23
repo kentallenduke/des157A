@@ -1,0 +1,122 @@
+/* page styles */
+
+* {
+   box-sizing:border-box;
+  
+   
+}
+
+body {
+    font-family: 'Gaegu', Verdana, sans-serif;
+    background-color:#F6F9FB;
+    
+   
+}
+
+h1  {
+    /* padding-top:10px; */
+    font-size:22pt;
+    text-align:center;
+    font-weight:800;
+    color:#3D3846;
+}
+
+h2 {
+    font-size:14pt;
+    font-weight:700;
+    color:#3D3846
+}
+
+p {
+    font-size:18pt;
+    font-weight:500;
+    line-height:1.5;
+    padding-bottom:10px;
+
+}
+
+li{
+  font-size:16pt;
+}
+
+/* nav bar */
+
+#banner {
+  overflow:hidden;
+  z-index:999;
+
+}
+
+.logo {
+   display:flex;
+   padding: 40px 80px 40px 80px;
+   align-items:center;
+   justify-content: space-between;
+  
+}
+
+/* main content */
+
+html, body { 
+  
+  height: 100%; 
+
+}
+
+#cardarea {
+  background-image: linear-gradient(180deg, white 3rem, #f0a4a480 calc(1rem), #f0a4a4b0 calc(3rem + 2px), #ffffff00 1px),
+  repeating-linear-gradient(0deg,white, white, white 1.5rem, #4688b3 1px, #fff0 calc(1.3rem + 4px));
+  background-position:0 -6px;
+  box-shadow: 0px 4px 20px rgba(0,0,0,.10);
+  height: 350px;
+  width: 500px;
+  margin: auto;
+  position: relative;
+  top: 50%;
+}
+
+
+#page .button{
+  display:flex;
+  text-align:center;
+  justify-content:center;
+  align-items:center;
+  padding-top:40px;
+}
+
+.image-button{
+  font-family:Montserrat, Verdana,sans-serif;
+  font-weight:500;
+  width:60px;
+  height:60px;
+  border-radius:100px;
+  background: linear-gradient(90deg, rgba(0,71,255,1) 0%, rgba(199,79,255,1) 100%);
+  border:0;
+  
+}
+
+.image-button img{
+    padding-top:14px;
+    align-items:center;
+    justify-content:center;
+}
+
+/* footer */
+
+footer{
+  font-family: Montserrat, Verdana, sans-serif;
+  height:100px;
+  color:black;
+  padding-top:20px;
+  text-align:center;
+  
+}
+
+/* Home page */
+
+
+
+@media only screen and (max-width: 480px) {
+
+
+}
