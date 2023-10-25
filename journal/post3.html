@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.svg">
+    <title>Journi - Visual thinking</title>
+</head>
+<body>
+    <header>
+        <section id="banner">
+            <div id="banner-elements">
+                <!-- Journi logo -->
+                <div class="logo">
+                    <a href="https://kentallenduke.github.io/kent-portal/journal/index.html">
+                        <img src="images/logo.svg" alt="logo">
+                    </a>
+                    <!-- Navigation - Github --> 
+                    <a href="https://github.com/kentallenduke/kent-portal" class="github">
+                        <img src="images/github-dark.svg" alt="github" >
+                    </a>
+                </div>            
+            </div>
+        </div>
+        </section>
+    </header>
+
+        <script>
+
+            // When the user scrolls the page, execute myFunction
+        window.onscroll = function() {
+            myFunction()
+        };
+        
+        // Get the navbar
+        var banner = document.getElementById("banner");
+        
+        // Get the offset position of the navbar
+        var sticky = banner.offsetTop;
+        
+        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+            
+          if (window.pageYOffset >= sticky) {
+            banner.classList.add("sticky")
+          } 
+          
+          else {
+            banner.classList.remove("sticky");
+          }
+}
+        
+    </script>
+
+    <section id="in-article">
+        <article id="in-article-content">
+            <p><img src="images/visualthinking.png" alt="visual thinking hero"></p>
+            <time datetime="2023-10-25">OCT 25 2023</time>
+            <h1>The path to unlocking visual intelligence</h1>
+            <p>The internet is full of photos, both of friends and family and of things that make us say "huh?" at first glance. It's often the latter that captures our attention the most, as seen in the intriguing photos that <a href="https://archive.nytimes.com/learning.blogs.nytimes.com/2015/02/27/10-intriguing-photographs-to-teach-close-reading-and-visual-thinking-skills/">Michael Gonchar from the New York Times</a> compiled for his readers. These photos help us to develop our visual thinking skills and to better understand the context of the photo. They challenge our expectations and force us to look at the world in a new way. Gonchar's collection of intriguing photos is a great example of this. His photos make us stop and think about what we're seeing, and they help us to see the world in a new light.</p> 
+            <p>After reading <a href="https://archive.nytimes.com/learning.blogs.nytimes.com/2015/02/27/10-intriguing-photographs-to-teach-close-reading-and-visual-thinking-skills/">Gonchar's article</a>, I looked for websites that use images and interactions to inspire visual thinking. I found <em><a href="https://www.google.com/search/howsearchworks/our-history/">Search Through Time</a></em>, a Google website that shows how Google Search has evolved to help us find information online. The site uses a timeline format with interesting images and trivia about Google's achievements. I found the interaction to be engaging: the timeline was easy to use, the trivia was fascinating, and the images helped to highlight Google's milestones over the years. Google did a great job of weaving together the storytelling, which made the experience memorable.</p> 
+            <p>Reading <a href="https://archive.nytimes.com/learning.blogs.nytimes.com/2015/02/27/10-intriguing-photographs-to-teach-close-reading-and-visual-thinking-skills/">Gonchar's article</a> and interacting with Search Through Time made me wish I had a more visual memory. My childhood memories are hazy and I'm not sure if I'm remembering them correctly. But Gonchar made it clear that visual thinking goes a long way in helping me recall specific experiences. By exercising this type of thought process, I'll be able to better articulate thoughts that had been unspecified but present in my mind.</p>
+            <p>Source: <em><a href="https://www.google.com/search/howsearchworks/our-history/">Search Through Time</a></em> 
+        </article> <!-- End of in-article content -->
+    </section> <!-- End of in article section -->
+
+    <footer>
+        <section class="footer-content">
+            <p> Designed by Kent Duke</p>
+        </section>
+    </footer>
+</body>
+</html>
