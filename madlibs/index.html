@@ -25,6 +25,51 @@
                         <img src="images/logo.svg" alt="logo">
                     </a>
                     <!-- Navigation - Github --> 
+                    
+<!-- MAD LIBS HELP EXPERIMENT -->
+
+<dialog id="dialog">
+    <div class="dialog-container">
+        <section class="dialog-header">
+            <button id="close-button">
+                <span>&times;</span>
+            </button>
+        </section>
+
+        <section class="dialog-info">
+            <p>Welcome to Mad Libs! Mad Libs is a phrasal template word game created by Leonard Stern and Roger Price. This game is frequently played as a party game or during pastime.</p>
+            <p>To play the game, fill in the blanks on the index card. When you are ready, click on the circle blue-purple flip button to reveal a story. Be creative! The more interesting your words are, the better the story gets!</p>
+            <p>If you are a little rusty with your grammar, here is a quick refresher:</p>
+            <ul>
+                <li><strong>Adjective</strong>: A word that describes or modifies a noun or pronoun. Example: big, red, one, alive.
+                    <ul>    
+                        <li>The <strong>big</strong> dog barked.</li>
+                        <li>That paint is <strong>blue</strong>.</li>
+                    </ul>
+                </li>
+                <li><strong>Noun</strong>: A word that names a person, place, thing, or idea. Example: apple, chicken, George, Santa Barbara.
+                    <ul>
+                        <li>I'm meeting <strong>Henry</strong> at the library today.</li>
+                        <li>Look at that cute <strong>dog</strong>!</li>
+                    </ul>
+                </li>
+                <li><strong>Verb</strong>: A word that describes an action, occurrence, or state of being. Example: run, was, is, have.
+                    <ul>
+                        <li>I <strong>run</strong> to the coffee shop every morning.</li>
+                        <li>I <strong>have</strong> finished my homework.</li>
+                    </ul>
+                </li>
+            </ul>
+            
+        </section>
+    </div>
+</dialog>
+
+<button id="help">Help [EXPERIMENTAL]</button>
+
+        
+                    <img src="images/help.svg" alt="help">
+                    </a>
                     <a href="https://github.com/kentallenduke/kent-portal" class="github">
                         <img src="images/github-dark.svg" alt="github" >
                     </a>
@@ -35,26 +80,31 @@
     </header>
 <section id="page">
     <section id="cardarea">
-        <div class="cardfront">
+        <div class="cardheader">
             <h1>Fill in these blanks.</h1>
-                <section class="card-data">
-                    <ul>
-                        <li>adjectives: <input data-word="1" type=text class="word"></li>
-                        <li>name: <input data-word="2" type=text class="word"></li>
-                        <li>adjectives: <input data-word="3"type=text class="word"></li>
-                        <li>adjectives: <input data-word="4" type=text class="word"></li>
-                        <li>food: <input data-word="5" type=text class="word"></li>
-                        <li>food: <input data-word="6" type=text class="word"></li>
-                        <li>noun: <input data-word="7" type=text class="word"></li>
-                        <li>noun: <input data-word="8" type=text class="word"> </li>
-                        <li>noise: <input data-word="9" type=text class="word"> </li>
-                        <li>animal: <input data-word="10" type=text class="word"></li>
-                        
-                </section>
-        
         </div>
+            <section class="card-data">
 
-        <div class="cardback">
+                <ul>
+                    <li>adjective: <input data-word="1" type=text class="word"></li>
+                    <li>name: <input data-word="2" type=text class="word"></li>
+                    <li>adjective: <input data-word="3"type=text class="word"></li>
+                    <li>adjective: <input data-word="4" type=text class="word"></li>
+                    <li>food: <input data-word="5" type=text class="word"></li>
+                    <li>food: <input data-word="6" type=text class="word"></li>
+                    <li>tree: <input data-word="7" type=text class="word"></li>
+                    <li>noise: <input data-word="8" type=text class="word"> </li>
+                    <li>noun: <input data-word="9" type=text class="word"> </li>
+                    <li>adjective: <input data-word="10" type=text class="word"></li>
+                </ul>
+            </section>
+
+        <div class="cardheader">
+            <img src="images/chicken.png" alt="chicken-sketch">
+                <h1>Chicken Libs!</h1>
+            <img src="images/egg.png" alt="egg-sketch">
+        </div>
+            <section class="card-data">   
                 <p>
                     Once upon a time, there was a <input data-word="1" type=text class="word"> 
                     chicken named <input data-word="2" type=text class="word">. She lived in a <input data-word="3" type=text class="word"> 
@@ -68,9 +118,8 @@
                     so <input data-word="10" type=text class="word">, <input data-word="2" type=text class="word"> was scared. 
                     She ran as fast as she could and made it home. She was tired, but very safe.
                 </p>
-        </div>
-
-        
+            </section>
+        </section>
     </section>
 
     <section class="button" id="flip">

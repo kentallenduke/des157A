@@ -12,7 +12,21 @@
             });
         });
     });
+
+    const help=document.getElementById("dialog");
     
+    document.body.addEventListener("click", () =>
+        {
+            help.showModal();           
+        });
+    
+    const closeButton=document.getElementById("close-button");
+    closeButton.addEventListener("click", () => 
+        {
+
+            help.close();
+        });
+
 })();
 
 
@@ -25,3 +39,4 @@
 $("#flip").click(function(){
     $("#cardarea").toggleClass("flipped");
 });
+
