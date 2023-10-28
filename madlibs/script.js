@@ -14,18 +14,18 @@
     });
 
 
-    const help=document.getElementById("dialog");
+    const guide=document.getElementById("guide");
     const closeButton=document.getElementById("btnClose");
     
-    help.addEventListener("click", () =>
+    guide.addEventListener("click", () =>
         {
-            dialog.showModal();           
+            guide.style.display='block';           
         });
     
     closeButton.addEventListener("click", () => 
         {
 
-            help.style.display = 'none';
+            guide.style.display = 'none';
 
 
         });
