@@ -58,9 +58,10 @@ li{
 /* help guide*/
 
 #guide{
-  max-width:50vw;
+  width:100%;
+  max-width:700px;
   margin-top:20vh;
-  max-height:600px;
+  max-height:60vh;
   
   
 }
@@ -71,19 +72,19 @@ li{
 
 .guide-header{
     position:fixed;
-    margin-left:48vw;
+    margin-left:660px;
     margin-top:-80px;
 }
 
 #btnClose{
  
   background-color:black;
-  padding:16px 18px 15px 18px;
+  padding:12px 14px 12px 14px;
   border-radius:50px;
   color:white;
   border:0;
   font-weight:bold;
-  font-size:18pt;
+  font-size:16pt;
 
   
 }

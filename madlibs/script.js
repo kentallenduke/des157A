@@ -17,15 +17,15 @@
     const guide=document.getElementById("guide");
     const closeButton=document.getElementById("btnClose");
     
-    guide.addEventListener("click", () =>
+    guideBtn.addEventListener("click", () =>
         {
-            guide.style.display='block';           
+            guide.showModal();          
         });
     
     closeButton.addEventListener("click", () => 
         {
 
-            guide.style.display = 'none';
+            guide.close();
 
 
         });
