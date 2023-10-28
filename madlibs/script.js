@@ -13,18 +13,21 @@
         });
     });
 
+
     const help=document.getElementById("dialog");
+    const closeButton=document.getElementById("btnClose");
     
-    document.body.addEventListener("click", () =>
+    help.addEventListener("click", () =>
         {
-            help.showModal();           
+            dialog.showModal();           
         });
     
-    const closeButton=document.getElementById("close-button");
     closeButton.addEventListener("click", () => 
         {
 
-            help.close();
+            help.style.display = 'none';
+
+
         });
 
 })();
