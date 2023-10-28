@@ -39,21 +39,30 @@ li{
   font-size:16pt;
 }
 
+
 /* nav bar */
 
-#banner {
+#navbar {
+  display:flex;
   overflow:hidden;
   z-index:999;
+  justify-content:space-between;
+  padding-right:40px;
+  align-items:center;
 
 }
 
 .logo {
-   display:flex;
-   padding: 40px 80px 40px 80px;
-   align-items:center;
-   justify-content: space-between;
-  
+   padding: 40px 0 40px 40px;    
 }
+
+.nav-buttons {
+  display:flex;
+  gap:40px;
+}
+
+
+  
 
 /* help guide*/
 
@@ -66,27 +75,33 @@ li{
   
 }
 
-.guide-info {
-  padding:0 20px 20px 20px;
-}
 
 .guide-header{
     position:fixed;
     margin-left:660px;
-    margin-top:-80px;
+    margin-top:-70px;
 }
 
 #btnClose{
  
   background-color:black;
-  padding:12px 14px 12px 14px;
+  
+  height:50px;
+  width:50px;
   border-radius:50px;
   color:white;
   border:0;
   font-weight:bold;
-  font-size:16pt;
+  font-size:14pt;
+  cursor:pointer;
+}
 
-  
+#guideBtn{
+  background:none;
+  color:inherit;
+  border:none;
+  cursor:pointer;
+
 }
 
 /* main content */
@@ -97,17 +112,27 @@ html, body {
 
 }
 
+.cardheader-front h1 {
+ padding-top:10px;
+  
+}
+
 #cardarea {
   background-image: linear-gradient(180deg, white 3rem, #f0a4a480 calc(1rem), #f0a4a4b0 calc(3rem + 2px), #ffffff00 1px),
   repeating-linear-gradient(0deg,white, white, white 1.5rem, #4688b3 1px, #fff0 calc(1.3rem + 4px));
   background-position:0 -6px;
   box-shadow: 0px 4px 20px rgba(0,0,0,.10);
-  height: 350px;
+  height: 346px;
   width: 500px;
   margin: auto;
   position: relative;
   top: 50%;
 }
+
+.card-data-front{
+  margin-left:70px;
+}
+
 
 
 #page .button{
@@ -118,22 +143,24 @@ html, body {
   padding-top:40px;
 }
 
-.image-button{
-  font-family:Montserrat, Verdana,sans-serif;
-  font-weight:500;
-  width:60px;
-  height:60px;
-  border-radius:100px;
+#button-area {
+  padding-top:40px;
+}
+.flip{
+  display:block;
   background: linear-gradient(90deg, rgba(0,71,255,1) 0%, rgba(199,79,255,1) 100%);
+  border-radius:100px;
   border:0;
+  height:60px;
+  width:60px;
+  margin-left:auto;
+  margin-right:auto;
+  align-items:center;
+  
+  
   
 }
 
-.image-button img{
-    padding-top:14px;
-    align-items:center;
-    justify-content:center;
-}
 
 /* footer */
 
@@ -156,12 +183,14 @@ footer{
 }
 
 .word {
-  padding: 0;
+  padding-bottom: 0;
   margin: 0;
   border: none;
   background: none;
-  border-bottom: 1px solid black;
-  transform:translateY(-8px);
-  line-height: -10px;
+  border-bottom: 2px solid #1a1a1a;
+  transform: translateY(0px);
+  width:23%;
+  height:26px;
+  margin-left:100px;
   color: blue;
 }

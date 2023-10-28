@@ -1,4 +1,7 @@
 (function(){
+
+    /* javascript that implements the mad lib game */
+    
     var wordElements = document.querySelectorAll(".word");
 
     wordElements.forEach(function(element) {
@@ -13,7 +16,8 @@
         });
     });
 
-
+    /* Javascript to open the guide */
+    
     const guide=document.getElementById("guide");
     const closeButton=document.getElementById("btnClose");
     
@@ -29,6 +33,9 @@
 
 
         });
+
+    /*Javascript to flip the card*/
+
 
 })();
 
