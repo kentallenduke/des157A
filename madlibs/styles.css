@@ -204,7 +204,7 @@ li{
   position: absolute;
   top: 10%;
   width: 100%;
-  font-size:12pt;
+  font-size:14pt;
   
 }
 
@@ -294,6 +294,7 @@ footer{
 
 
 .card-data-back p{
+  
   line-height:1;
 }
 
@@ -309,4 +310,10 @@ footer{
 
 .card-data-front .word{
   margin-right:100px;
+}
+
+.card-data-back .word{
+  width:16%;
+  height:25px;
+ 
 }
