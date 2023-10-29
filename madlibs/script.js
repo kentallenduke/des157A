@@ -35,31 +35,31 @@
         });
 
     /*Javascript to flip the card*/
-
-    
-    
-    document.addEventListener('DOMContentLoaded', function(event) {
         
-     document.getElementById('flipBtn').style.visibility = 'visible';
-    
+    document.getElementById('flipBtn').style.visibility = 'visible';
     document.getElementById('flipBtn').onclick = function() {
-    document.getElementById('cardarea').classList.toggle('do-flip');
+        
+        document.getElementById('cardarea').classList.toggle('do-flip');
+          if(document.getElementsByClassName("word").value==="") { 
+            document.getElementById('flipBtn').disabled = true; 
+        } 
+    
+    else { 
+            document.getElementById('flipBtn').disabled = false;
+        }
     
     };
 
-    /* Javascript to rotate icon */
+    /* Javascript to rotate the flip icon */
 
      document.getElementById('flipBtn').addEventListener('click', function() {
       const icon = this.querySelector('.rotate-icon');
       icon.classList.toggle('rotate');
     });
-});
 
-
-
-
+  
+    
 })();
-
 
 // $(".word").on('blur', function(){
 //     var text = $(this).val();
@@ -70,4 +70,5 @@
 $("#flip").click(function(){
     $("#cardarea").toggleClass("flipped");
 });
+
 
