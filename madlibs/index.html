@@ -17,7 +17,7 @@
 <body>
     <!-- Top header menu containing the Mad Libs logo and Navigation bar -->
     <header>
-        <section id="navbar">
+        <div id="navbar">
             
             <!-- Madlibs logo -->
             <div class="logo">
@@ -31,12 +31,12 @@
             <!-- MAD LIBS HELP EXPERIMENT -->
             <dialog id="guide">
                 <div class="guide-container">
-                    <section class="guide-header">
+                    <div class="guide-header">
                         <button id="btnClose">
                             <span>&times;</span>
                         </button>
-                    </section>
-                <section class="guide-info">
+                    </div>
+                <div class="guide-info">
                     <p>Welcome to Mad Libs! Mad Libs is a phrasal template word game originally created by Leonard Stern and Roger Price in 1958. It is frequently played as a party game or during pastime.</p>
                     <p>To play the game, fill in the blanks on the index card. <strong>Up to nine characters</strong> can be added to each blank. When you are ready, click on the blue 'FLIP' button at the bottom to reveal a story.</p>
                     <p> <strong> Let your imagination run wild!</strong> The more engaging your language, the more captivating your story will be.</p>
@@ -56,31 +56,31 @@
                                 <li>I <strong>run</strong> to the coffee shop every morning.</li>
                                 <li>I <strong>have</strong> finished my homework.</li>
                             </ul>
-                </section>
+                        </div>
             </div>
         </dialog>
             
             <div class="nav-buttons">
-                <button id="guideBtn"><img src="images/help.svg" alt="help" height="30px" width="30px"></button>
+                <button id="guideBtn"><img src="images/help.svg" alt="help" height="30px;" width="30px;"></button>
                 <a href="https://github.com/kentallenduke/kent-portal" class="github">
                     <img src="images/github-dark.svg" alt="github" >
                 </a>
             </div>            
             
-        </section>
+        </div>
     </header>
-<section id="page">
-    <section id="cardarea">
-        <section id="flip-card-front">
+<div id="page">
+    <div id="cardarea">
+        <div id="flip-card-front">
             <div class="cardheader-front">
                 <h1>Fill in these blanks.</h1>
             </div>
-                <section class="card-data-front">
+                <div class="card-data-front">
     
                     <ol>
                         <li>adjective: <input data-word="1" type=text maxlength="9" class="word"></li>
                         <li>name: <input data-word="2" type=text maxlength="9" class="word"></li>
-                        <li>adjective: <input data-word="3"type=text maxlength="9" class="word"></li>
+                        <li>adjective: <input data-word="3" type=text maxlength="9" class="word"></li>
                         <li>adjective: <input data-word="4" type=text maxlength="9" class="word"></li>
                         <li>food: <input data-word="5" type=text maxlength="9" class="word"></li>
                         <li>food: <input data-word="6" type=text maxlength="9" class="word"></li>
@@ -89,16 +89,16 @@
                         <li>noun: <input data-word="9" type=text maxlength="9" class="word"> </li>
                         <li>adjective: <input data-word="10" type=text maxlength="9" class="word"></li>
                     </ol>
-                </section>
-        </section>
+                </div>
+            </div>
 
-        <section id="flip-card-back">
+        <div id="flip-card-back">
             <div class="cardheader-back">
                 <img src="images/chicken.png" alt="chicken-sketch">
                     <h1>Chicken Libs!</h1>
                 <img src="images/egg.png" alt="egg-sketch">
             </div>
-                <section class="card-data-back">   
+                <div class="card-data-back">   
                     <p>
                         Once upon a time, there was a <input data-word="1" type=text class="word"> 
                         chicken named <input data-word="2" type=text class="word">. She lived in a <input data-word="3" type=text class="word"> 
@@ -112,16 +112,16 @@
                         so <input data-word="10" type=text class="word">, <input data-word="2" type=text class="word"> was scared. 
                         She ran as fast as she could and made it home. She was tired, but very safe.
                     </p>
-            </section>
-        </section>
-    </section>
+                </div>
+            </div>
+    </div>
     
 <div id="button-area">
         <button id="flipBtn">
-                <img class="rotate-icon" src="images/flipicon.svg" height="40px" width="40px">FLIP
+                <img class="rotate-icon" src="images/flipicon.svg" alt="refresh-icon" height="40px;" width="40px;">FLIP
         </button>
 </div>
-</section>
+</div>
 <!--
 <footer>
     <section id="footer-content">

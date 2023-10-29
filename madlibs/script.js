@@ -40,14 +40,6 @@
     document.getElementById('flipBtn').onclick = function() {
         
         document.getElementById('cardarea').classList.toggle('do-flip');
-          if(document.getElementsByClassName("word").value==="") { 
-            document.getElementById('flipBtn').disabled = true; 
-        } 
-    
-    else { 
-            document.getElementById('flipBtn').disabled = false;
-        }
-    
     };
 
     /* Javascript to rotate the flip icon */
