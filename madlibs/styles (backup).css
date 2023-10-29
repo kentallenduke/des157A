@@ -104,26 +104,16 @@ li{
 
 }
 
+/* main content */
 
+html, body { 
+  
+  height: 100%; 
 
-/* CARD */
-
+}
 
 .cardheader-front h1 {
  padding-top:10px;
-  
-}
-
-.cardheader-back {
-  display:flex;
-  align-items:center;
-  gap:20px;
-  justify-content:center;
-}
-
-.cardheader-back img{
-  width:40px;
-  height:40px;
   
 }
 
@@ -137,66 +127,26 @@ li{
   margin: auto;
   position: relative;
   top: 50%;
-  transition: all 1s ease-in-out;
-  transform-style: preserve-3d;
 }
-
 
 .card-data-front{
   margin-left:70px;
 }
 
 
-/*
-#cardarea {
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  margin: 50px auto;
-  position: absolute;
-  transition: all 1s ease-in-out;
-  transform-style: preserve-3d;
-}*/
 
-
-.do-flip {
-  transform: rotateY(-180deg);
-}
-
-
-#cardarea .flip-card-front, #cardarea .flip-card-back {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  backface-visibility: hidden;
-  z-index: 2;
-  box-shadow: 5px 6px 32px 2px rgba(133,133,133,0.71);
-}
-
-#cardarea .flip-card-back {
-    background: lightgreen;
-    border:1px solid grey;
-}
-#cardarea .flip-card-back {
-    background: lightblue;
-    border: 1px solid grey;
-    transform: rotateY(180deg);
-}
-#cardarea .flip-card-front p, #cardarea .flip-card-back p {
-  color: grey;
-  display: block;
-  position: absolute;
-  top: 40%;
-  width: 100%;
-}
-
-
+/*#page .button{
+  display:flex;
+  text-align:center;
+  justify-content:center;
+  align-items:center;
+  padding-top:40px;*/
 
 #button-area {
   padding-top:40px;
   
 }
-#flip{
+.flip{
   display:block;
   background: linear-gradient(90deg, rgba(0,71,255,1) 0%, rgba(199,79,255,1) 100%);
   border-radius:100px;
@@ -206,11 +156,11 @@ li{
   margin-left:auto;
   margin-right:auto;
   align-items:center;
-   
+  
+  
+  
+  
 }
-
-
-
 
 
 /* footer */
@@ -222,6 +172,15 @@ footer{
   padding-top:20px;
   text-align:center;
   
+}
+
+/* Home page */
+
+
+
+@media only screen and (max-width: 480px) {
+
+
 }
 
 .word {

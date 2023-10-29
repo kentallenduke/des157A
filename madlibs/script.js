@@ -36,6 +36,14 @@
 
     /*Javascript to flip the card*/
 
+    document.getElementById('flip').style.visibility = 'visible';
+    document.addEventListener('DOMContentLoaded', function(event) {
+    
+    document.getElementById('flip').onclick = function() {
+    document.getElementById('card-area').classList.toggle('do-flip');
+    };
+});
+
 
 })();
 
