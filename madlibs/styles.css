@@ -30,7 +30,7 @@ h2 {
 p {
     font-size:18pt;
     font-weight:500;
-    line-height:1.5;
+    line-height:1.20;
     padding-bottom:10px;
 
 }
@@ -53,12 +53,13 @@ li{
 }
 
 .logo {
-   padding: 20px 0 0 20px;    
+   padding: 40px 0 0 40px;    
 }
 
 .nav-buttons {
   display:flex;
   gap:40px;
+  margin-top:10px;
 }
 
 
@@ -120,6 +121,7 @@ li{
 }
 
 .cardheader-back {
+
   display:flex;
   align-items:center;
   gap:20px;
@@ -129,7 +131,8 @@ li{
 .cardheader-back img{
   width:40px;
   height:40px;
-  
+  margin-bottom:20px;
+    
 }
 
 #cardarea {
@@ -144,23 +147,16 @@ li{
   transform-style: preserve-3d;
 }
 
-
+/*
 .card-data-front{
   margin-left:70px;
-}
-
-
-/*
-#cardarea {
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  margin: 50px auto;
-  position: absolute;
-  transition: all 1s ease-in-out;
-  transform-style: preserve-3d;
 }*/
 
+.card-data-back p {
+ padding-left:20px;
+ padding-right:20px;
+
+}
 
 .do-flip {
   transform: rotateY(-180deg);
@@ -279,6 +275,10 @@ footer{
   transform: translateY(0px);
   width:23%;
   height:26px;
-  margin-left:100px;
   color: blue;
+}
+
+
+.card-data-back p{
+  line-height:1;
 }
