@@ -1,5 +1,5 @@
 (function(){
-
+    'use strict';
     /* javascript that implements the mad lib game */
     
     var wordElements = document.querySelectorAll(".word");
@@ -36,13 +36,26 @@
 
     /*Javascript to flip the card*/
 
-    document.getElementById('flip').style.visibility = 'visible';
-    document.addEventListener('DOMContentLoaded', function(event) {
     
-    document.getElementById('flip').onclick = function() {
-    document.getElementById('card-area').classList.toggle('do-flip');
+    
+    document.addEventListener('DOMContentLoaded', function(event) {
+        
+     document.getElementById('flipBtn').style.visibility = 'visible';
+    
+    document.getElementById('flipBtn').onclick = function() {
+    document.getElementById('cardarea').classList.toggle('do-flip');
+    
     };
+
+    /* Javascript to rotate icon */
+
+     document.getElementById('flipBtn').addEventListener('click', function() {
+      const icon = this.querySelector('.rotate-icon');
+      icon.classList.toggle('rotate');
+    });
 });
+
+
 
 
 })();
