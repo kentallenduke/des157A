@@ -7,19 +7,14 @@
     wordElements.forEach(function(element) {
         element.addEventListener('blur', function() {
             var text = this.value;
-            var myData = this.getAttribute("data-word"); 
-        });
-         
-    element.addEventListener('keyUp', function() {
-        if(this.value.length == 0)
-        document.getElementById('flipBtn').disabled = true;
-});
-
+            var myData = this.getAttribute("data-word");
+            var matchingElements = document.querySelectorAll(".word[data-word='" + myData + "']");
             
-});
-
+            matchingElements.forEach(function(matchingElement) {
+                matchingElement.value = text;
+            });
         });
-    
+    });
 
     /* Javascript to open the guide */
     
@@ -54,6 +49,9 @@
       icon.classList.toggle('rotate');
     });
 
+  
+    
+})();
 
 // $(".word").on('blur', function(){
 //     var text = $(this).val();
@@ -64,5 +62,4 @@
 $("#flip").click(function(){
     $("#cardarea").toggleClass("flipped");
 });
-
 
