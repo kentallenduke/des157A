@@ -156,6 +156,10 @@ footer{
   border-radius:20px;
  
 }
+ figcaption {
+    padding-top:20px;
+    font-style:italic;
+  }
 
 @media only screen and (max-width: 480px) {
 
@@ -198,4 +202,6 @@ footer{
   #in-article img{
     border-radius:10px;
   }
+
+ 
 }
