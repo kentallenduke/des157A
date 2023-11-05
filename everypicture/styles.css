@@ -1,0 +1,66 @@
+/* page styles */
+
+* {
+    box-sizing:border-box;
+   
+    
+ }
+ 
+ body {
+     font-family: 'Roboto', sans-serif;
+     background-color:#D1D0D1;
+     
+    
+ }
+ 
+ h1  {
+     /* padding-top:10px; */
+     font-size:22pt;
+     text-align:center;
+     font-weight:800;
+     color:#3D3846;
+ }
+ 
+ h2 {
+     font-size:14pt;
+     font-weight:700;
+     color:#3D3846
+ }
+ 
+ p {
+     font-size:18pt;
+     font-weight:500;
+     line-height:1;
+     padding-bottom:10px;
+ 
+ }
+ 
+ li{
+   font-size:16pt;
+ }
+ 
+ 
+ /* nav bar */
+ 
+ #navbar {
+   display:flex;
+   overflow:hidden;
+   z-index:999;
+   justify-content:space-between;
+   padding-right:40px;
+   align-items:center;
+ 
+ }
+ 
+ .logo {
+    padding: 40px 0 0 40px;    
+ }
+ 
+ .nav-buttons {
+   display:flex;
+   gap:40px;
+   margin-top:10px;
+ }
+
+
+ 
