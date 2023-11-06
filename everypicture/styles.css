@@ -8,7 +8,7 @@
  
  body {
      font-family: 'Roboto', sans-serif;
-     background-color:#D1D0D1;
+     background-color:#F2F2F2;
      
     
  }
@@ -53,14 +53,172 @@
  }
  
  .logo {
-    padding: 40px 0 0 40px;    
+   
+    padding: 20px 0 0 40px;
+    position:relative;
+    z-index:100; /* prevents shadow overlay from covering the logo */
  }
  
  .nav-buttons {
    display:flex;
+   align-items:center;
    gap:40px;
-   margin-top:10px;
+   margin-top:20px;
  }
 
+/* page content */
 
+/* Leaves overlay */
+
+#shadow {
+ position:absolute; /*keeps the shadow from moving elements*/
+
+ 
+}
+
+
+
+
+/* Clothes line */
+
+#top #topline img  {
+ position:absolute;
+ width:100%;
+ margin-top:20px
+
+}
+
+#bottom #bottomline img {
+ position:absolute;
+ width:100%;
+ margin-top:40px
+}
+
+#top #topline img, #bottom #bottomline img{
+ filter: drop-shadow(0 10px 2px rgb(0 0 0/0.5));
+}
+ 
+
+/* vertical spacing between photos */
+
+#top{
+ margin-top:-90px;
+ padding-top:10vh;
+ margin-bottom:10vh;
+ 
+}
+#bottom{
+ margin-top:-100px;
+ margin-bottom:10vh;
+}
+
+/* Clothes pins */
+
+
+#top #top-pins  {
+ 
+ display:flex;
+ justify-content:center;
+ gap:calc(5vw + 220px);
+ bottom:20px;
+}
+
+#bottom #bottom-pins {
+ display:flex;
+ justify-content:center;
+ gap:calc(5vw + 220px);
+ bottom:5px;
+}
+
+
+#top #top-pins img, #bottom #bottom-pins img{
+ box-shadow: -6px 4px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+
+/*clothes pin - top row always on top*/
+
+#top #top-pins {
+ position:relative;
+ z-index:10;
+}
+
+#top #photos {
+ position:relative;
+ z-index:9;
+}
+
+#bottom #bottom-pins {
+ position:relative;
+ z-index:8;
+}
+
+#bottom #photos {
+ position:relative;
+ z-index:7;
+}
+
+/* clothes pin - rotate transformation */
+
+#top #top-pins .pin1{
+ transform:rotate(-20deg);
+}
+
+#top #top-pins .pin2{
+ transform:rotate(20deg);
+}
+
+#top #top-pins .pin3{
+ transform:rotate(-2deg);
+}
+
+#bottom #bottom-pins .pin4{
+ transform:rotate(20deg);
+}
+
+#bottom #bottom-pins .pin5{
+ transform:rotate(2deg);
+}
+
+#bottom #bottom-pins .pin6{
+ transform:rotate(-20deg);
+}
+
+
+
+/* Photos */
+
+
+#top #photos {
+ display:flex;
+ justify-content:center;
+ gap:5vw;
+ align-items: flex-start;
+ margin-top:-50px;
+ 
+}
+
+#bottom #photos {
+ display:flex;
+ justify-content:center;
+ gap:5vw;
+ align-items: flex-start;
+ margin-top:-30px;
+}
+
+/* Photo - card style */
+#landscape, #portrait{
+ background-color:white;
+ padding:10px 10px 60px 10px;
+ box-shadow: -15px 15px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* Photos - selection */
+
+#top #photos #portrait:hover, #top #photos #landscape:hover, #bottom #photos #portrait:hover, #bottom #photos #landscape:hover{
+ cursor:pointer;
+ outline:6px solid #ff9700;
+ outline-offset:-2px;
+ 
+}
  
