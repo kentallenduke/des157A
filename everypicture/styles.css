@@ -84,14 +84,14 @@
 #top #topline img  {
  position:absolute;
  width:100%;
- margin-top:20px
+ margin-top:20px;
 
 }
 
 #bottom #bottomline img {
  position:absolute;
  width:100%;
- margin-top:40px
+ margin-top:40px;
 }
 
 #top #topline img, #bottom #bottomline img{
