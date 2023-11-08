@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.svg">
+    <title>Journi - Visual thinking</title>
+</head>
+<body>
+    <header>
+        <section id="banner">
+            <div id="banner-elements">
+                <!-- Journi logo -->
+                <div class="logo">
+                    <a href="https://kentallenduke.github.io/kent-portal/journal/index.html">
+                        <img src="images/logo.svg" alt="logo">
+                    </a>
+                    <!-- Navigation - Github --> 
+                    <a href="https://github.com/kentallenduke/kent-portal" class="github">
+                        <img src="images/github-dark.svg" alt="github" >
+                    </a>
+                </div>            
+            </div>
+        </div>
+        </section>
+    </header>
+
+        <script>
+
+            // When the user scrolls the page, execute myFunction
+        window.onscroll = function() {
+            myFunction()
+        };
+        
+        // Get the navbar
+        var banner = document.getElementById("banner");
+        
+        // Get the offset position of the navbar
+        var sticky = banner.offsetTop;
+        
+        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+            
+          if (window.pageYOffset >= sticky) {
+            banner.classList.add("sticky")
+          } 
+          
+          else {
+            banner.classList.remove("sticky");
+          }
+}
+        
+    </script>
+
+    <section id="in-article">
+        <article id="in-article-content">
+            <p><img src="images/gameux.jpg" alt="gameux hero"></p>
+            <time datetime="2023-11-07">NOV 07 2023</time>
+            <h1>Game on! How to make a successful video game</h1>
+            <p>I'm an avid gamer, and I'm not afraid to admit it. The advancements in computer technology have transformed game worlds into immersive experiences that are more lifelike than ever before. However, graphics aren't the sole reason why gamers spend an average of eight hours per week playing games. The real secret lies in the intuitiveness, ease of use, and accessibility that make games truly captivating.</p> 
+            <p>In his insightful article <a href="https://uxplanet.org/game-design-ux-best-practices-guide-4a3078c32099">Game Design UX Best Practices</a>," Amir Dori from UX Planet delves into the best practices for implementing key game mechanics. While I'm familiar with many of the UX strategies Dori suggests, I found his discussion on pop-ups and rewarded videos particularly interesting.</p>
+            <p>Pop-ups are generally despised by most people, as they disrupt our focus on the primary content. Dori offers practical solutions to mitigate this annoyance, such as incorporating animations into user-initiated actions or employing a semi-transparent background. However, his suggestion to eliminate the "X" button surprised me the most. In my web design experience, I've always relied on close buttons for modal dialogs, as they are universally recognized as a means of escape. Dori contends that pop-ups with an "X" are perceived as having little to no value, leading users to dismiss them immediately. This is a suggestion that I would like to test further to gain a deeper understanding of its effectiveness.</p>
+            <p>Rewarded videos also caught my attention. Monetization is crucial for the sustainability of game development. However, many implementations fail to strike the right balance, leaving users frustrated. Dori emphasizes that rewarded video prizes should be substantial, not trivial, to incentivize users to watch the ad. Striking the right chord between monetization and user satisfaction is essential for maximizing profits while fostering a growing user base.</p>
+            <p>While these are not absolute rules, I appreciate Dori's comprehensive explanation of these effective strategies for enhancing the gaming UX. Mobile game design UX often falls short, with unpolished UIs and poor layout principles hindering the user experience. However, incorporating these techniques can significantly improve the overall appeal of these games.</p>
+            <p>Source: <em><a href="https://uxplanet.org/game-design-ux-best-practices-guide-4a3078c32099">Game Design UX Best Practices</a></em></p>
+        </article> <!-- End of in-article content -->
+    </section> <!-- End of in article section -->
+
+    <footer>
+        <section class="footer-content">
+            <p> Designed by Kent Duke</p>
+        </section>
+    </footer>
+</body>
+</html>
