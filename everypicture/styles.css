@@ -5,6 +5,14 @@
    
     
  }
+
+html, body {
+ margin:0;
+ height:100%;
+ overflow:hidden;
+}
+
+
  
  body {
      font-family: 'Roboto', sans-serif;
@@ -64,33 +72,307 @@
    align-items:center;
    gap:40px;
    margin-top:20px;
+   position:relative;
+   z-index:99;
  }
 
 /* page content */
+
+
 
 /* Leaves overlay */
 
 #shadow {
  position:absolute; /*keeps the shadow from moving elements*/
-
+ 
 }
 
 #shadow .leaf1{
  position:relative;
- background-color:red;
+ background-color:black;
  opacity:25%;
- width: 1200px;
- height:100px;
+ width: 340px;
+ height:50px;
+ border-radius:100%;
+ transform-origin:top left;
+ transform:rotate(75deg);
+ top:300px;
+ margin-left:-30px; 
+ filter:blur(10px);
+}
+
+#shadow .leaf2{
+ position:relative;
+ background-color:black;
+ opacity:25%;
+ width: 800px;
+ height:60px;
  border-radius:100%;
  z-index:50;
+ transform-origin:top left;
+ transform:rotate(65deg);
+ top:100px;
+ margin-left:-40px;
+ filter:blur(10px);
+}
+
+#shadow .leaf3{
+ position:relative;
+ background-color:black;
+ opacity:30%;
+ width: 1200px;
+ height:80px;
+ border-radius:100%;
+ z-index:50;
+ transform-origin:top left;
+ transform:rotate(35deg);
+ top:-300px;
+ margin-left:-90px;
+ filter:blur(10px);
+}
+
+#shadow .leaf4{
+ position:relative;
+ background-color:black;
+ opacity:25%;
+ width: 1000px;
+ height:80px;
+ border-radius:100%;
+ z-index:50;
+ transform-origin:top left;
+ transform:rotate(43deg);
+ top:-300px;
+ margin-left:-40px;
+ filter:blur(10px);
+}
+
+#shadow .leaf5{
+ position:relative;
+ background-color:black;
+opacity:25%;
+ width: 800px;
+ height:90px;
+ border-radius:100%;
+ z-index:50;
+ transform-origin:top left;
+ transform:rotate(60deg);
+ top:-300px;
+ margin-left:-40px;
+ filter:blur(10px);
+}
+
+
+#shadow .leaf6{
+ position:relative;
+ background-color:black;
+opacity:25%;
+ width: 1600px;
+ height:80px;
+ border-radius:100%;
+ z-index:50;
+ transform-origin:top left;
+ transform:rotate(30deg);
+ top:-700px;
+ margin-left:-240px;
+ filter:blur(10px);
+}
+
+#shadow .leaf7{
+  position:relative;
+ background-color:black;
+ opacity:25%;
+ width: 1200px;
+ height:80px;
+ border-radius:100%;
+ z-index:50;
+ transform-origin:top left;
  transform:rotate(20deg);
- top:200px;
+ top:-700px;
+ margin-left:-40px;
+ filter:blur(10px);
+}
+
+#shadow .leaf8{
+ position:relative;
+ background-color:black;
+opacity:25%;
+ width: 1400px;
+ height:60px;
+ border-radius:100%;
+ z-index:50;
+ transform-origin:top left;
+ transform:rotate(19deg);
+ top:-860px;
+ margin-left:-40px;
+ filter:blur(10px);
+}
+
+/* swinging animation */
+
+/*animation - leaf*/
+
+#shadow  {
+ animation: shadow ease-in-out 3s  infinite ;
+ transform-origin: top left 2px;
+ z-index:40;
  
+}
+
+
+
+@keyframes shadow {
+    0% { 
+     
+     transform: rotate(1deg); 
+     
+    }
+ 
+    50% { 
+     
+     transform: rotate(-1deg); 
+     
+     }
+
+    100% {
+    transform:rotate(1deg);
+    }
+}
+
+
+/* animation - clothesline*/
+
+#top, #bottom  {
+ animation: clothesline ;
+ animation-duration: 14s;
+ animation-iteration-count:infinite ;
+ animation-timing-function: ease-in-out;
+ animation-delay:1s;
+ position:relative;
  
  
 }
 
 
+
+@keyframes clothesline {
+    0% { 
+     
+     top:0;
+     
+    }
+ 
+ 
+   55% {
+    top:0;
+   }
+
+   65% {
+    top:15px;
+   }
+
+   70% {
+    top:0;
+   }
+
+   75% {
+    top:10px;
+   }
+
+   80% {
+
+   top:0;
+   }
+
+   85% {
+    top:5px;
+   }
+
+  90% {
+   top:0;
+  }
+
+ 95% {
+  top:3px;
+ }
+   
+   100% {
+    top:0;
+    }
+}
+
+/* animation: top and down movement for photos */
+
+#photos {
+ animation: photos;
+ animation-duration: 14s;
+ animation-iteration-count:infinite ;
+ animation-timing-function: ease-in-out;
+ animation-delay:1s;
+ position:relative;
+}
+
+@keyframes photos {
+    0% { 
+     
+     top:0;
+     
+    }
+ 
+ 
+   55% {
+    top:0;
+  
+    
+   }
+
+   65% {
+    top:2px;
+    
+   }
+
+   70% {
+    top:0;
+    
+   }
+
+   75% {
+    top:2px;
+ 
+   }
+
+   80% {
+
+   top:0;
+
+    
+   }
+
+   85% {
+    top:1px;
+    
+   }
+
+  90% {
+   top:0;
+   
+  }
+
+ 95% {
+  top:1px;
+ 
+ }
+   
+ 100% {
+  top:0;
+    
+    }
+}
+
+/*animation - photo 1 rotation */
+
+.photo1 {
+
+}
 
 
 /* Clothes line */
