@@ -1,0 +1,206 @@
+/* page styles */
+
+* {
+    box-sizing:border-box;
+   
+    
+ }
+
+html, body {
+
+}
+
+
+ 
+ body {
+     font-family: 'DM Sans', sans-serif;
+     background-color:#191D21;
+     letter-spacing:-1px;
+     position:relative;
+    
+ }
+ 
+ h1  {
+     /* padding-top:10px; */
+     font-size:22pt;
+     text-align:center;
+     font-weight:800;
+     color:#3D3846;
+ }
+ 
+ h2 {
+     font-size:14pt;
+     font-weight:700;
+     color:#3D3846
+ }
+ 
+ p {
+     font-size:15pt;
+     font-weight:500;
+     line-height:1;
+     line-height:1.25;
+     padding-bottom:10px;
+ 
+ }
+ 
+ li{
+   font-size:16pt;
+ }
+ 
+ 
+ /* nav bar */
+ 
+ #navbar {
+   display:flex;
+   overflow:hidden;
+   z-index:999;
+   justify-content:space-between;
+   padding-right:40px;
+   align-items:center;
+
+ 
+ }
+ 
+ .logo {
+   
+    padding: 20px 0 0 40px;
+    position:relative;
+ 
+ }
+ 
+ .nav-buttons {
+   display:flex;
+   align-items:center;
+   gap:40px;
+   margin-top:20px;
+   position:relative;
+   
+ }
+
+/*     PAGE THAT HOLDS THE GAME AREA      */
+
+#page {
+
+ overflow-x:scroll; /*enables horizontal scrolling when page width is too small*/
+}
+
+
+/*     STYLES FOR THE GAME CONTAINER     */
+
+
+#game-container {
+ background-color:#343d46;
+ width:1000px;
+ height:540px;
+ position:relative;
+ margin:auto;
+ border-radius:20px;
+ margin-top:18vh;
+ bottom:90px;
+
+}
+
+/*area where the game draws the shape. This is to prevent shapes from clipping the timer*/
+#shapesarea{
+ 
+width:1000px;
+height:500px;
+border-radius:20px;
+/*background-color:#ff000030; /*debug: puts a tint to show where the shape boundaries are*/
+
+}
+
+/*area where the game puts the two timers. There are two: meter active, and meter. Active represents the time left*/
+
+#timerarea {
+ width:1000px;
+ height:40px;
+
+ /*background-color:#ff000030; /*debug: puts a tint to show where the timer boundaries are*/
+}
+
+/*       THE SHAPES       */
+
+.circle {
+background-color:red; /* temp: color will randomize */
+width:40px;
+height:40px;
+border-radius:100%;
+}
+
+.square {
+background-color:red; /* temp: color will randomize */
+width:40px;
+height:40px;
+}
+
+.triangle {
+
+border-bottom: 40px solid #f00; /*temp: color will randomize*/
+border-right: 0px solid transparent;
+border-left: 40px solid transparent;
+width: 30px;
+}
+
+.trapezoid {
+ border-bottom: 30px solid #f00; /*temp: color will randomize*/
+	border-left: 16px solid transparent;
+	border-right: 16px solid transparent;
+	height: 0;
+	width: 60px;
+}
+
+.halfcircle{         
+ height: 20px; 
+ width: 40px; 
+ border-radius: 150px 150px 0 0; 
+ background-color: #f00; /*temp: color will randomize*/
+}
+
+.Lshape {
+ margin:10px;
+ width:25px;
+ height:45px;
+ background-color:red;
+}
+
+.Lshape2 {
+	 float:left;
+    width:35px;
+    height:65px;
+    border-width:2px;
+    border-style:solid;
+    margin:-2px 0 0 -2px;
+    border-color:#FFF #333 #333 #FFF; }
+}
+
+/*     PROGRESS METER - STYLE      */
+
+/* progress meter - how much time is left */
+.meteractive {
+ display:flex;
+ position:relative;
+ width:400px; /*note: this dimension is arbitrary to show the timer like in the mock. This will match .meter once the actual timer works*/
+ height:10px;
+ left:20%;
+ background-color:white;
+ justify-content: center;
+ align-items: center;
+ z-index:10;
+  border-radius:20px;
+}
+
+/*the meter itself */
+.meter {
+ display:flex;
+ position:relative;
+ width:550px; /*note: this dimension is arbitrary to show the timer like in the mock. This will match .meter once the actual timer works*/
+ height:10px;
+ left:20%;
+ bottom:10px;
+ background-color:#ffffff26;
+ justify-content: center;
+ align-items: center;
+ z-index:9;
+ border-radius:20px;
+}
