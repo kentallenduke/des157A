@@ -1,0 +1,320 @@
+/* page styles */
+
+* {
+   box-sizing:border-box;
+  
+   
+}
+
+body {
+    font-family: 'Gaegu', Verdana, sans-serif;
+    background-color:#F6F9FB;
+    
+   
+}
+
+h1  {
+    /* padding-top:10px; */
+    font-size:22pt;
+    text-align:center;
+    font-weight:800;
+    color:#3D3846;
+}
+
+h2 {
+    font-size:14pt;
+    font-weight:700;
+    color:#3D3846
+}
+
+p {
+    font-size:18pt;
+    font-weight:500;
+    line-height:1;
+    padding-bottom:10px;
+
+}
+
+li{
+  font-size:16pt;
+}
+
+
+/* nav bar */
+
+#navbar {
+  display:flex;
+  overflow:hidden;
+  z-index:999;
+  justify-content:space-between;
+  padding-right:40px;
+  align-items:center;
+
+}
+
+.logo {
+   padding: 40px 0 0 40px;    
+}
+
+.nav-buttons {
+  display:flex;
+  gap:40px;
+  margin-top:10px;
+}
+
+
+  
+
+/* help guide*/
+
+#guide{
+  width:100%;
+  max-width:700px;
+  margin-top:20vh;
+  max-height:60vh;
+  
+  
+}
+
+
+.guide-header{
+    position:fixed;
+    margin-left:660px;
+    margin-top:-70px;
+}
+
+#btnClose{
+ 
+  background-color:black;
+  
+  height:50px;
+  width:50px;
+  border-radius:50px;
+  color:white;
+  border:0;
+  font-weight:bold;
+  font-size:14pt;
+  cursor:pointer;
+}
+
+#guideBtn{
+  background:none;
+  color:inherit;
+  border:none;
+  cursor:pointer;
+
+}
+#page{
+  
+  position:relative;
+  margin-top:18vh;
+ 
+  
+}
+
+
+/* CARD */
+
+
+.cardheader-front h1 {
+ margin-top:10px;
+}
+
+.cardheader-back {
+
+  display:flex;
+  align-items:center;
+  gap:20px;
+  justify-content:center;
+ 
+}
+.cardheader-back h1{
+  margin-top:4px;
+}
+
+.cardheader-back img{
+  width:40px;
+  height:44px;
+  margin-bottom:20px;
+    
+}
+
+#cardarea {
+  background-image: linear-gradient(180deg, white 3rem, #f0a4a480 calc(1rem), #f0a4a4b0 calc(3rem + 2px), #ffffff00 1px),
+                    repeating-linear-gradient(0deg,white, white, white 1.5rem, #4688b3 1px, #fff0 calc(1.3rem + 4px));
+  background-position:0 -6px;
+  box-shadow: 0px 4px 20px rgba(0,0,0,.10);
+  height: 346px;
+  width: 500px;
+  margin: auto;
+  transition: all 1s ease-in-out;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  background-color:white;
+  
+}
+
+/* This spot fixes mirroring issue with Firefox.*/
+#cardarea #flip-card-back{
+  background-image: linear-gradient(180deg, white 3rem, #f0a4a480 calc(1rem), #f0a4a4b0 calc(3rem + 2px), #ffffff00 1px),
+                    repeating-linear-gradient(0deg,white, white, white 1.5rem, #4688b3 1px, #fff0 calc(1.3rem + 4px));
+  background-position:0 -6px;
+  box-shadow: 0px 4px 20px rgba(0,0,0,.10);
+}
+
+
+
+.card-data-back p {
+ padding-left:20px;
+ padding-right:20px;
+
+}
+
+.do-flip {
+  transform: rotateY(-180deg);
+ 
+}
+
+
+#cardarea #flip-card-front {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  z-index: 2;
+  
+}
+
+#cardarea #flip-card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  z-index: 2;
+  
+}
+
+#cardarea #flip-card-back {
+   
+    transform: rotateY(180deg);
+  
+}
+
+ #cardarea #flip-card-back p {
+ 
+  position: absolute;
+  top: 8.8%;
+  width: 100%;
+  font-size:14pt;
+  
+}
+
+
+
+#button-area {
+  padding-top:40px;
+  
+}
+#flipBtn{
+  /* display:block; */
+  font-family:monospace;
+  font-weight:600;
+  font-size:12pt;
+  background: rgb(0 71 255);
+  border-radius:100px;
+  border:0;
+  height:50px;
+  width:120px;
+  margin-left:auto;
+  margin-right:auto;
+  align-items:center;
+  display:flex;
+  gap:2px;
+  color:white;
+  justify-content: center;
+   transition:0.25s all ease-in-out;
+}
+
+#flipBtn:hover{
+  cursor:pointer;
+  background: rgb(36 96 255);
+  filter: drop-shadow(0px 20px 20px rgb(4 74 255 / 20%));
+  transition:0.25s all ease-in-out;
+  
+
+  
+}
+
+#flipBtn:active{
+  cursor:pointer;
+  background: rgb(0 50 182);
+
+  
+}
+
+
+
+.rotate-icon {
+    transition: 1s ease-in-out;
+
+}
+
+.rotate{
+    transform:rotate(360deg);
+
+}
+
+
+
+
+
+
+
+/* footer */
+
+footer{
+  font-family: Montserrat, Verdana, sans-serif;
+  height:100px;
+  color:black;
+  padding-top:20px;
+  text-align:center;
+  
+}
+
+.word {
+  padding-bottom: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  border-bottom: 2px solid #1a1a1a;
+  transform: translateY(0px);
+  width:23%;
+  height:26px;
+  color: blue;
+}
+
+
+
+.card-data-front li {
+  margin-left:50px;
+  display:flex;
+  justify-content: space-between;
+  line-height:1;
+  align-content: center;
+  align-items: center;
+  
+}
+
+.card-data-front .word{
+  margin-right:100px;
+}
+
+.card-data-back .word{
+  width:16%;
+  height:25px;
+ 
+}
+
+.disabledBtn{
+  background-color: gray !important;
+}
