@@ -6,14 +6,14 @@
 body {
    font-family:Montserrat, Verdana, sans-serif;
    letter-spacing:-0.5px;
-   background-color:white;
+   background-color: #F3FFE5;
   
 }
 
 h1  {
    font-size:28pt ;
    font-weight:800;
-   color:#3D3846;
+   color:#152919;
   
    
 }
@@ -21,13 +21,13 @@ h1  {
 h1 a {
    font-size:28pt ;
    font-weight:800;
-   color:#3D3846;
+   color:#152919;
 }
 
 h2{
-   font-size:14pt;
+   font-size:24pt;
    font-weight:700;
-   color:#3D3846
+   color:#152919
 }
 
 p, a{
@@ -35,6 +35,7 @@ p, a{
    font-weight:500;
    line-height:1.5;
    padding-bottom:10px;
+   color:#152919;
  
 }
 
@@ -61,9 +62,9 @@ a:active{
 
 #banner {
  overflow:hidden;
- background-color:#ffffff82;
+ background-color:#f3ffe590;
  backdrop-filter: blur(40px);
- box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.15);
+ box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.1);
  z-index:999;
 
 }
@@ -104,6 +105,9 @@ footer{
  padding-top:20px;
  text-align:center;
  
+}
+footer p {
+   color:white;
 }
 
 /* Home page */
