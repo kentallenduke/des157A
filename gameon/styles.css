@@ -5,18 +5,12 @@
    
     
  }
-
-html, body {
-
-}
-
-
  
  body {
-     font-family: 'DM Sans', sans-serif;
+     font-family: 'Outfit', sans-serif;
      background-color:#191D21;
      letter-spacing:-1px;
-     position:relative;
+    
     
  }
  
@@ -24,14 +18,15 @@ html, body {
      /* padding-top:10px; */
      font-size:22pt;
      text-align:center;
-     font-weight:800;
-     color:#3D3846;
+     font-weight:500;
+     color:#ffffff;
  }
  
  h2 {
-     font-size:14pt;
-     font-weight:700;
-     color:#3D3846
+     font-size:50pt;
+     font-weight:500;
+     color:red;
+	 
  }
  
  p {
@@ -48,40 +43,13 @@ html, body {
  }
  
  
- /* nav bar */
- 
- #navbar {
-   display:flex;
-   overflow:hidden;
-   z-index:999;
-   justify-content:space-between;
-   padding-right:40px;
-   align-items:center;
+ /* Github */
 
- 
- }
- 
- .logo {
-   
-    padding: 20px 0 0 40px;
-    position:relative;
- 
- }
- 
- .nav-buttons {
-   display:flex;
-   align-items:center;
-   gap:40px;
-   margin-top:20px;
-   position:relative;
-   
- }
-
-/*     PAGE THAT HOLDS THE GAME AREA      */
-
-#page {
-
- overflow-x:scroll; /*enables horizontal scrolling when page width is too small*/
+#github{
+	
+	display:flex;
+	justify-content:end;
+	padding:40px;
 }
 
 
@@ -90,115 +58,148 @@ html, body {
 
 #game-container {
  background-color:#343d46;
- width:1000px;
- height:540px;
- position:relative;
- margin:auto;
- border-radius:20px;
- margin-top:18vh;
- bottom:90px;
 
 }
 
 /*area where the game draws the shape. This is to prevent shapes from clipping the timer*/
-#shapesarea{
- 
-width:1000px;
-height:500px;
-border-radius:20px;
-/*background-color:#ff000030; /*debug: puts a tint to show where the shape boundaries are*/
 
+#shapesarea{
+
+	display:grid;
+	width:100%;
+	height:30vh;
+	grid-template-columns: repeat(10, 1fr);
+	grid-template-rows: repeat(10, 1fr);
+	gap: 10px;
+}
+#shapesarea > div 
+{
+  margin: auto;
+  margin-top: calc(100%/10);
+	margin-bottom: calc(100%/10);
 }
 
 /*area where the game puts the two timers. There are two: meter active, and meter. Active represents the time left*/
 
 #timerarea {
- width:1000px;
- height:40px;
+	
+ width:100%;
+ height:30vh;
 
  /*background-color:#ff000030; /*debug: puts a tint to show where the timer boundaries are*/
 }
+
+/*       START and WIN/LOSE SCREEN      */
+#start {
+	
+display:flex;
+position:absolute;
+flex-direction: column;
+align-items: center;
+justify-content:center;
+width:100%;
+margin-top:32vh;
+top:20px;
+
+}
+
+#start #start-text{
+width:100%;
+}
+
+#start #start-buttons{
+display:flex;
+flex-direction: column;
+gap:20px;
+
+	
+	
+
+}
+
+button {
+
+	font-size:20pt;
+	border-radius:40px;
+	padding:20px;
+	background-color:#cae0f9;
+	border:none;
+	
+}
+
 
 /*       THE SHAPES       */
 
 .circle {
 background-color:red; /* temp: color will randomize */
-width:40px;
-height:40px;
+width:30px;
+height:30px;
 border-radius:100%;
+
 }
 
 .square {
 background-color:red; /* temp: color will randomize */
-width:40px;
-height:40px;
+width:30px;
+height:30px;
 }
 
 .triangle {
 
-border-bottom: 40px solid #f00; /*temp: color will randomize*/
+border-bottom: 30px solid #f00; /*temp: color will randomize*/
 border-right: 0px solid transparent;
-border-left: 40px solid transparent;
-width: 30px;
+border-left: 30px solid transparent;
+width: 20px;
+height:0;
 }
 
 .trapezoid {
- border-bottom: 30px solid #f00; /*temp: color will randomize*/
-	border-left: 16px solid transparent;
-	border-right: 16px solid transparent;
+ border-bottom: 20px solid #f00; /*temp: color will randomize*/
+	border-left: 12px solid transparent;
+	border-right: 12px solid transparent;
 	height: 0;
-	width: 60px;
+	width: 40px;
 }
 
 .halfcircle{         
- height: 20px; 
- width: 40px; 
+ height: 15px; 
+ width: 30px; 
  border-radius: 150px 150px 0 0; 
  background-color: #f00; /*temp: color will randomize*/
 }
-
-.Lshape {
- margin:10px;
- width:25px;
- height:45px;
- background-color:red;
+.selected {
+	outline: 3px solid white;
+	outline-offset: 3px
 }
 
-.Lshape2 {
-	 float:left;
-    width:35px;
-    height:65px;
-    border-width:2px;
-    border-style:solid;
-    margin:-2px 0 0 -2px;
-    border-color:#FFF #333 #333 #FFF; }
 
 
 /*     PROGRESS METER - STYLE      */
 
 /* progress meter - how much time is left */
-.meteractive {
+#meteractive {
  display:flex;
  position:relative;
- width:400px; /*note: this dimension is arbitrary to show the timer like in the mock. This will match .meter once the actual timer works*/
  height:10px;
- left:20%;
+ margin:auto;
+ width:50%;
  background-color:white;
  justify-content: center;
  align-items: center;
  z-index:10;
-  border-radius:20px;
+ border-radius:20px;
 }
 
 /*the meter itself */
-.meter {
+
+#meter {
  display:flex;
  position:relative;
- width:550px; /*note: this dimension is arbitrary to show the timer like in the mock. This will match .meter once the actual timer works*/
+ width:50%;
  height:10px;
- left:20%;
+ left:25%;
  bottom:10px;
- background-color:#ffffff26;
+ background-color:#00000029;
  justify-content: center;
  align-items: center;
  z-index:9;

@@ -8,53 +8,74 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
         <link rel="icon" type="image/x-icon" href="images/favicon.svg">
         <script src="script.js" defer></script>
-        <title>Duo</title>
+        <title>Duet</title>
     </head>
 <body>
-    <!-- Top header menu containing the Duo logo and Navigation bar -->
-    <header>
-        <div id="navbar">
+    <!-- Top header menu containing the Duet logo and Navigation bar -->
+<div id="game-container">
+                       
+        <!-- Github button --> 
             
-            <!-- Duo logo -->
-            <div class="logo">
-                <a href="https://kentallenduke.github.io/kent-portal/gameon/index.html">
-                    <img src="images/logo.svg" alt="logo">
-                </a>
-            </div>
-            
-                <!-- Navigation - Github --> 
-            
-            <div class="nav-buttons">
-                <a href="https://github.com/kentallenduke/kent-portal" class="github">
-                    <img src="images/github-dark.svg" alt="github" >
-                </a>
-            </div>            
+        <div id="github">
+            <img src="images/github-dark.svg" alt="github" >
+        </div>
+
+    <div id="start"> <!--Start screen--> 
+        <div class="logo">
+            <a href="https://kentallenduke.github.io/kent-portal/gameon/index.html">
+                <img src="images/logo.svg" alt="logo">
+            </a>
+        </div>
+        <div id="start-text">
+            <h1>Select your difficulty</h1>
+        </div>
+        <div id="start-buttons">
+            <button class="easy">Easy</button>
+            <button class="medium">Intermediate</button>
+            <button class="hard">Hard</button>
+        </div>
+    </div>
+
+    <div id="game"> <!--The game-->
+        <div id="shapesarea"> <!--Section to create the shapes. Needed to prevent overlapping timer -->
             
         </div>
-    </header>
-<div id="page">
-    <div id="game-container">
-        <div id="shapesarea">
-            <div class="circle"></div>
-            <div class="square"></div>
-            <div class="triangle"></div>
-            <div class="trapezoid"></div>
-            <div class="halfcircle"></div>
-            <div class="Lshape">
-                <div class="Lshape2"></div>
+
+        <div id="timerarea"> <!--Section to show timer-->
+            <div id="meteractive"></div> <!--How much time is left-->
+            <div id="meter"></div> <!--The length of the meter-->
+        </div>
+    </div>
+
+    <div id="finish"> <!--Display the screen if the timer runs out or all shapes matched -->
+        
+        <div id="win"> <!-- If the player matches all of the shapes, display this -->
+            <div id="win-text">
+                <h1>You matched all of the shapes!</h1>
+                <p>Your score is</p>
+                <h2 id="score"></h2>
+            </div>
+            <div class="retry"> <!-- Offer ability to play again with the same difficulty, or make it easier/harder -->
+                <button class="retryBtn">Play again</button>
+                <button class="quit">Change difficulty</button>
             </div>
         </div>
 
-        <div id="timerarea">
-            <div class="meteractive"></div>
-            <div class="meter"></div>
+        <div id="lose"> <!-- If the player runs out of time, show this screen -->
+            <div id="lose-text">
+                <h1>Game over!</h1>
+                <p>You ran out of time.</p>
+            </div>
+            <div class="retry"> <!-- Offer ability to play again with the same difficulty, or make it easier/harder -->
+                <button class="retryBtn">Play again</button>
+                <button class="quit">Return to main menu</button>
+            </div>
         </div>
     </div>
-   
 </div>
 
 </body>
