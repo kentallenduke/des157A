@@ -104,16 +104,14 @@ top:20px;
 }
 
 #start #start-text{
-width:100%;
+width:50%;
 }
 
 #start #start-buttons{
+padding-top:20px;
 display:flex;
 flex-direction: column;
 gap:20px;
-
-	
-	
 
 }
 
@@ -124,6 +122,7 @@ button {
 	padding:20px;
 	background-color:#cae0f9;
 	border:none;
+	cursor:pointer;
 	
 }
 
@@ -205,3 +204,20 @@ height:0;
  z-index:9;
  border-radius:20px;
 }
+
+/*          FINISH STATE        */
+#finish {
+	display:flex;
+	position:relative;
+	bottom:30vh;
+	justify-content:center;
+	align-content: center;
+	align-items: center;
+}
+
+#lose #lose-text h1, #win #win-text h1{
+	font-size:48pt;
+}
+
+/* styles specific to lose the game */
+
