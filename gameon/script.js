@@ -3,7 +3,8 @@ difficulty = "normal";
 curClicked = 0;
 numFound = 0;
 numItems = 0;
-const limitTime = 30000;
+//const limitTime = 30000;
+const limitTime = 999999000; /*debug*/
 timeRemaining = limitTime;
 
 (function(){
@@ -117,31 +118,6 @@ function shuffleArray(array)
     }
 }
 
-function matchAudio (){
-    let matchaudio= new Audio('audio/match.wav');
-    matchaudio.play();
-}
-
-function winAudio (){
-    let winaudio= new Audio('audio/win.wav');
-    winaudio.play();
-}
-
-function loseAudio (){
-    let loseaudio= new Audio('audio/lose.wav');
-    loseaudio.play();
-}
-
-function selectAudio (){
-    let selectaudio= new Audio('audio/select.wav');
-    selectaudio.play();
-}
-
-function notamatchAudio (){
-    let notamatchaudio= new Audio('audio/notamatch.wav');
-    notamatchaudio.play();
-}
-
 function shapeClick(element)
 {
     //we clicked on the same one
@@ -159,7 +135,8 @@ function shapeClick(element)
     //nothing is selected
     if(curClicked == 0)
     {
-        selectAudio();
+   
+        (new Audio('audio/select.wav')).play();
         curClicked = element.target;
         curClicked.classList.add("selected");
         return;
@@ -172,7 +149,8 @@ function shapeClick(element)
         if(curClicked.classList.contains(element.target.classList[0]))
         {
             curClicked.classList.remove('selected');
-            matchAudio();
+            
+            (new Audio('audio/match.wav')).play();
             curClicked.parentNode.insertBefore(document.createElement("div"),curClicked.nextSibling);
             curClicked.remove();
 
@@ -183,7 +161,8 @@ function shapeClick(element)
             numFound++;
             if(numFound >= numItems/2) //we win
             {
-                winAudio();
+                
+                (new Audio('audio/win.wav')).play();
                 document.getElementById("game").style.visibility = "hidden";
                 document.getElementById("finish").style.visibility = "visible";
                 document.getElementById("start").style.visibility = "hidden";
@@ -192,7 +171,7 @@ function shapeClick(element)
                 document.getElementById("win").style.visibility = "visible";
                 document.getElementById("lose").style.visibility = "hidden";
 
-                document.getElementById("score").innerHTML = limitTime-timeRemaining;
+                document.getElementById("score").innerHTML = limitTime-(limitTime-timeRemaining);
             }
         }
         //wrong :(
@@ -200,7 +179,7 @@ function shapeClick(element)
         {
             curClicked.classList.remove('selected');
             curClicked = 0;
-            notamatchAudio();
+            (new Audio('audio/notamatch.wav')).play();
         }
     }
 }
@@ -216,20 +195,17 @@ function countdown()
 {
     if(numFound >= numItems/2 || timeRemaining <= 0) //game over, stop timer
         return;
-    if(timeRemaining >= 0) 
+    timeRemaining -= 10; // decrement by 10 milliseconds
+    document.getElementById("meteractive").style.width = timeRemaining/limitTime/2*100+"%";
+    if(timeRemaining <= 0)
     {
-        timeRemaining -= 10; // decrement by 10 milliseconds
-        document.getElementById("meteractive").style.width = timeRemaining/limitTime/2*100+"%";
-        if(timeRemaining <= 0)
-        {
-            loseAudio();
-            document.getElementById("game").style.visibility = "hidden";
-            document.getElementById("finish").style.visibility = "visible";
-            document.getElementById("start").style.visibility = "hidden";
-            document.getElementById("github").style.display = "visible";
-    
-            document.getElementById("win").style.visibility = "hidden";
-            document.getElementById("lose").style.visibility = "visible";
-        }
-    } 
+        (new Audio('audio/lose.wav')).play();
+        document.getElementById("game").style.visibility = "hidden";
+        document.getElementById("finish").style.visibility = "visible";
+        document.getElementById("start").style.visibility = "hidden";
+        document.getElementById("github").style.display = "visible";
+
+        document.getElementById("win").style.visibility = "hidden";
+        document.getElementById("lose").style.visibility = "visible";
+    }
 }

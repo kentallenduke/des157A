@@ -59,33 +59,37 @@
 
 #game-container {
  background-color:#343d46;
+height:0%;
 
 }
 
 /*area where the game draws the shape. This is to prevent shapes from clipping the timer*/
 
 #shapesarea{
-
+	
 	display:grid;
 	width:100%;
-	height:30vh;
 	grid-template-columns: repeat(10, 1fr);
-	grid-template-rows: repeat(10, 1fr);
+	grid-template-rows: 1fr repeat(10, 1fr) 1fr;
+	height:100vh;
 	gap: 10px;
+	height:3vh;
 }
 #shapesarea > div 
 {
   margin: auto;
   margin-top: calc(100%/10);
-	margin-bottom: calc(100%/10);
+  margin-bottom: calc(100%/10);
 }
 
 /*area where the game puts the two timers. There are two: meter active, and meter. Active represents the time left*/
 
 #timerarea {
-	
+position:relative;
  width:100%;
- height:30vh;
+height:100px;
+	top:700px;
+ 
 
  /*background-color:#ff000030; /*debug: puts a tint to show where the timer boundaries are*/
 }
