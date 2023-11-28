@@ -4,7 +4,7 @@ curClicked = 0;
 numFound = 0;
 numItems = 0;
 //const limitTime = 30000;
-const limitTime = 999999000; /*debug*/
+const limitTime =9000000000; /*debug*/
 timeRemaining = limitTime;
 
 (function(){
@@ -55,7 +55,7 @@ function prepGame()
     if(difficulty == "easy")
         numItems = 100;
     else if(difficulty == "normal")
-        numItems = 200;
+        numItems = 100;
     else if(difficulty == "hard") {
         numItems = 100;
     }
@@ -185,13 +185,16 @@ function shapeClick(element)
 }
 function gameStart()
 {
+
     setInterval(countdown, 10);
-    if(numFound >= numItems/2 || timeRemaining <= 0)
-        clearInterval(countdown);
+    //clearInterval(countdown)
+
 }
 
 function countdown()
 {
+    if(numFound >= numItems/2 || timeRemaining <= 0) //game over, stop timer
+        return;
     timeRemaining -= 10; // decrement by 10 milliseconds
     document.getElementById("meteractive").style.width = timeRemaining/limitTime/2*100+"%";
     if(timeRemaining <= 0)
