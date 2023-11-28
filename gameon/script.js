@@ -185,16 +185,13 @@ function shapeClick(element)
 }
 function gameStart()
 {
-
     setInterval(countdown, 10);
-    //clearInterval(countdown)
-
+    if(numFound >= numItems/2 || timeRemaining <= 0)
+        clearInterval(countdown);
 }
 
 function countdown()
 {
-    if(numFound >= numItems/2 || timeRemaining <= 0) //game over, stop timer
-        return;
     timeRemaining -= 10; // decrement by 10 milliseconds
     document.getElementById("meteractive").style.width = timeRemaining/limitTime/2*100+"%";
     if(timeRemaining <= 0)

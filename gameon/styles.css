@@ -8,7 +8,7 @@
  
  body {
      font-family: 'Outfit', sans-serif;
-     background-color:#191D21;
+     background-color:#343d46;
      letter-spacing:-1px;
     
     
@@ -59,21 +59,23 @@
 
 #game-container {
  background-color:#343d46;
-height:0%;
+height:0;
+
+	
 
 }
 
 /*area where the game draws the shape. This is to prevent shapes from clipping the timer*/
 
 #shapesarea{
-	
+	margin-top:2vh;
 	display:grid;
 	width:100%;
 	grid-template-columns: repeat(10, 1fr);
-	grid-template-rows: 1fr repeat(10, 1fr) 1fr;
-	height:100vh;
-	gap: 10px;
-	height:3vh;
+	grid-template-rows: auto auto auto;
+	
+	height:10vh;
+	
 }
 #shapesarea > div 
 {
@@ -85,10 +87,12 @@ height:0%;
 /*area where the game puts the two timers. There are two: meter active, and meter. Active represents the time left*/
 
 #timerarea {
+padding-right:10vw;
 position:relative;
- width:100%;
-height:100px;
-	top:700px;
+width:100%;
+height:0;
+top:20vw;
+margin-top:300px;
  
 
  /*background-color:#ff000030; /*debug: puts a tint to show where the timer boundaries are*/
@@ -153,27 +157,26 @@ height:30px;
 border-bottom: 30px solid #f00; /*temp: color will randomize*/
 border-right: 0px solid transparent;
 border-left: 30px solid transparent;
-width: 20px;
-height:0;
+
+
 }
 
 .trapezoid {
  border-bottom: 20px solid #f00; /*temp: color will randomize*/
-	border-left: 12px solid transparent;
-	border-right: 12px solid transparent;
-	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
 	width: 40px;
 }
 
 .halfcircle{         
- height: 15px; 
- width: 30px; 
+ height: 20px; 
+ width: 40px; 
  border-radius: 150px 150px 0 0; 
  background-color: #f00; /*temp: color will randomize*/
 }
 .selected {
 	outline: 3px solid white;
-	outline-offset: 3px
+	outline-offset: 3px;
 }
 
 
