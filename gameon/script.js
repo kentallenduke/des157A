@@ -117,18 +117,49 @@ function shuffleArray(array)
     }
 }
 
+function matchAudio (){
+    let matchaudio= new Audio('audio/match.wav');
+    matchaudio.play();
+}
+
+function winAudio (){
+    let winaudio= new Audio('audio/win.wav');
+    winaudio.play();
+}
+
+function loseAudio (){
+    let loseaudio= new Audio('audio/lose.wav');
+    loseaudio.play();
+}
+
+function selectAudio (){
+    let selectaudio= new Audio('audio/select.wav');
+    selectaudio.play();
+}
+
+function notamatchAudio (){
+    let notamatchaudio= new Audio('audio/notamatch.wav');
+    notamatchaudio.play();
+}
+
 function shapeClick(element)
 {
     //we clicked on the same one
+    
     if(curClicked == element.target)
     {
+        
         curClicked.classList.remove("selected");
         curClicked = 0;
         return false;
+        
+        
+       
     }
     //nothing is selected
     if(curClicked == 0)
     {
+        selectAudio();
         curClicked = element.target;
         curClicked.classList.add("selected");
         return;
@@ -141,6 +172,7 @@ function shapeClick(element)
         if(curClicked.classList.contains(element.target.classList[0]))
         {
             curClicked.classList.remove('selected');
+            matchAudio();
             curClicked.parentNode.insertBefore(document.createElement("div"),curClicked.nextSibling);
             curClicked.remove();
 
@@ -151,6 +183,7 @@ function shapeClick(element)
             numFound++;
             if(numFound >= numItems/2) //we win
             {
+                winAudio();
                 document.getElementById("game").style.visibility = "hidden";
                 document.getElementById("finish").style.visibility = "visible";
                 document.getElementById("start").style.visibility = "hidden";
@@ -167,6 +200,7 @@ function shapeClick(element)
         {
             curClicked.classList.remove('selected');
             curClicked = 0;
+            notamatchAudio();
         }
     }
 }
@@ -180,21 +214,22 @@ function gameStart()
 
 function countdown()
 {
-    if(numFound >= numItems/2) //we win
+    if(numFound >= numItems/2 || timeRemaining <= 0) //game over, stop timer
         return;
-    if(timeRemaining > 0) 
+    if(timeRemaining >= 0) 
     {
         timeRemaining -= 10; // decrement by 10 milliseconds
         document.getElementById("meteractive").style.width = timeRemaining/limitTime/2*100+"%";
+        if(timeRemaining <= 0)
+        {
+            loseAudio();
+            document.getElementById("game").style.visibility = "hidden";
+            document.getElementById("finish").style.visibility = "visible";
+            document.getElementById("start").style.visibility = "hidden";
+            document.getElementById("github").style.display = "visible";
+    
+            document.getElementById("win").style.visibility = "hidden";
+            document.getElementById("lose").style.visibility = "visible";
+        }
     } 
-    else 
-    {
-        document.getElementById("game").style.visibility = "hidden";
-        document.getElementById("finish").style.visibility = "visible";
-        document.getElementById("start").style.visibility = "hidden";
-        document.getElementById("github").style.display = "visible";
-
-        document.getElementById("win").style.visibility = "hidden";
-        document.getElementById("lose").style.visibility = "visible";
-    }
 }
