@@ -3,8 +3,8 @@ difficulty = "normal";
 curClicked = 0;
 numFound = 0;
 numItems = 0;
-//const limitTime = 30000;
-const limitTime =9000000000; /*debug*/
+const limitTime = 30000;
+//const limitTime =9000000000; /*debug*/
 timeRemaining = limitTime;
 
 (function(){

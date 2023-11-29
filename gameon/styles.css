@@ -98,7 +98,7 @@ position:relative;
 width:100%;
 height:10px;
 top:20vw;
-margin-top:550px;
+margin-top:400px;
  
 
  /*background-color:#ff000030; /*debug: puts a tint to show where the timer boundaries are*/
@@ -140,14 +140,30 @@ button {
 	cursor:pointer;
 	width:200px;
 	font-weight:600;
+	transition:0.2s;
 	
+}
+
+button:hover{
+	box-shadow: 0px 0px 10px 0px rgba(202,224,249,1);
+	background-color:#b2d3f7;
+}
+
+button:active{
+	background-color: #8c9bab;
 }
 
 #start-buttons .hard{
 	background-color:#ffa3a3;
 }
 
-
+#start-buttons .hard:hover{
+	box-shadow: 0px 0px 10px 0px #ff9191;
+	background-color:#ff9191;
+}
+#start-buttons .hard:active{
+	background-color:#af6767;
+}
 /*       THE SHAPES       */
 
 .circle {
@@ -190,7 +206,7 @@ height:0;
 .selected {
 	outline: 3px solid white;
 	outline-offset: 3px;
-	filter: drop-shadow(0 0 0.15rem crimson);
+	
 }
 
 
@@ -233,20 +249,20 @@ height:0;
 #finish {
 	position:absolute;
 	width:100%;
-	bottom: 400px;
-}
-
-#win {
-	position:absolute;
-	width:100%;
+	top:40vh;
 	
-	top:-500px;
 	
 }
 
-#win #win-text {
-	padding-top:20vh;
-	margin-top:200px;
+#lose{
+	position:relative;
+	bottom:400px;
+	
+}
+
+#win  {
+	position:relative;
+	bottom:180px;
 }
 
 #lose #lose-text h1, #win #win-text h1{
@@ -275,14 +291,6 @@ height:0;
 }
 
 
-#lose {
-	position:relative;
-	bottom:0;
-	bottom:0;
-	
-	
-	
-}
 
 /*  animation for hard mode  */
 
