@@ -157,7 +157,7 @@ function shapeClick(element)
             element.target.parentNode.insertBefore(document.createElement("div"),element.target.nextSibling);
             element.target.remove();
             curClicked = 0;
-            timeRemaining += 1500;
+            timeRemaining += 1250;
             numFound++;
             if(numFound >= numItems/2) //we win
             {
