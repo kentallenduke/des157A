@@ -307,16 +307,13 @@ height:0;
 	0% {
 		opacity:1;
 		transform:rotate(480deg);
-		left:0;
-		top:0;
+		
 		
 	}
 
 	25% {
 		opacity:0.2;
 		transform:rotate(0deg);
-		left:10px;
-		top:20px;
 		
 			
 	}
@@ -324,24 +321,21 @@ height:0;
 	50% {
 		opacity:1;
 		transform:rotate(480deg);
-		left:0;
-		top:40px;
+		
 		
 	}
 
 	75% {
 		opacity:0.2;
 		transform:rotate(0deg);
-		left:10px;
-		top:20px;
+		
 		
 	}
 
 	100% {
 		opacity:1;
 		transform:rotate(480deg);
-		left:0;
-		top:0;
+		
 		
 	}
 }
