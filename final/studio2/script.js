@@ -38,7 +38,7 @@
     const guide=document.getElementById("guide");
     const closeButton=document.getElementById("btnClose");
     
-    guideBtn.addEventListener("click", () =>
+    helpsectionBtn.addEventListener("click", () =>
         {
             guide.showModal();          
         });
