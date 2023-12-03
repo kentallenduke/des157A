@@ -4,7 +4,7 @@
     
     var wordElements = document.querySelectorAll(".word.fillable");
 
-    wordElements.forEach(function(element) 
+    /*wordElements.forEach(function(element) 
     {
         element.addEventListener('blur', function() 
         {
@@ -17,7 +17,19 @@
             });
         });
         element.addEventListener('keyup', checkTexts);
-    });
+    });*/
+    document.addEventListener('blur', function(event) {
+        if (event.target.classList.contains('word')) {
+            const text = event.target.value;
+            const myData = event.target.getAttribute("data-word");
+            const matchingElements = document.querySelectorAll(`.word[data-word='${myData}']`);
+
+            matchingElements.forEach(matchingElement => {
+                matchingElement.value = text;
+            });
+        }
+    }, true);
+
 
     function checkTexts(event)
     {
