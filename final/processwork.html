@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.svg">
+    <title>Debrief - Developing MadLibs 2.0</title>
+</head>
+<body>
+    <header>
+        <section id="banner">
+            <div id="banner-elements">
+                <!-- Debrief logo -->
+                <div class="logo">
+                    <a href="https://kentallenduke.github.io/kent-portal/final/processwork.html">
+                        <img src="images/logo.svg" alt="logo" width="250" height="92">
+                    </a>
+                    <!-- Navigation - Github --> 
+                    <a href="https://github.com/kentallenduke/kent-portal" class="github">
+                        <img src="images/github-dark.svg" alt="github" >
+                    </a>
+                </div>            
+            </div>
+        </div>
+        </section>
+    </header>
+
+            <script>
+
+            // When the user scrolls the page, execute myFunction
+        window.onscroll = function() {
+            myFunction()
+        };
+        
+        // Get the navbar
+        var banner = document.getElementById("banner");
+        
+        // Get the offset position of the navbar
+        var sticky = banner.offsetTop;
+        
+        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+            
+          if (window.pageYOffset >= sticky) {
+            banner.classList.add("sticky")
+          } 
+          
+          else {
+            banner.classList.remove("sticky");
+          }
+}
+            </script>
+
+    <section id="in-article">
+        <article id="in-article-content">
+            <p><img src="images/madlibs-processwork-hero.jpg" alt="MadLibs Process Work Hero"></p>
+            <time datetime="2023-12-02">DEC 02 2023</time>
+            <h1>Process work: Developing MadLibs 2.0</h1>
+            
+            <p> For the final project, I am improving the functionality of the Flip button for my Mad Libs project. One common complaint was that users playing the word game can 
+                flip the index card even if they did not fill out all of the input fields. This introduced confusion since they were unsure if they needed to
+                fill out one or all of the inputs. To fix this, I plan to implement a conditional check on the button. Upon page load, the button will be disabled 
+                by default. The browser will need to verify if the player filled out all of the input fields. Additionally, I need to write code that stops the browser
+                from verifying the fields on the back side of the card. When the user fills out all of the fields, the browser will enable the button, allowing the 
+                user to flip the card and view the story.
+            </p>
+            
+            <figure>
+                <img src="images/diagram.jpg" alt="diagram chart">
+                <figcaption>A function flow diagram for the upgraded Flip button.</figcaption>
+            </figure>
+          
+         
+        </article> <!-- End of in-article content -->
+    </section> <!-- End of in article section -->
+
+    <footer>
+        <section class="footer-content">
+            <p> Designed by Kent Duke</p>
+        </section>
+    </footer>
+</body>
+</html>

@@ -53,7 +53,7 @@
 
     /*Javascript to flip the card*/
         
-    document.getElementById('flipBtn').style.visibility = 'visible';
+    //document.getElementById('flipBtn').style.visibility = 'visible';
     document.getElementById('flipBtn').onclick = function(e) {
         if(e.target.parentElement.classList.contains("disabledBtn") || e.target.classList.contains("disabledBtn"))
             return false;
