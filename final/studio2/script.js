@@ -18,17 +18,19 @@
         });
         element.addEventListener('keyup', checkTexts);
     });*/
+    
     document.addEventListener('blur', function(event) {
-        if (event.target.classList.contains('word')) {
-            const text = event.target.value;
-            const myData = event.target.getAttribute("data-word");
-            const matchingElements = document.querySelectorAll(`.word[data-word='${myData}']`);
+    // Check if event.target is an element and has a classList
+    if (event.target instanceof Element && event.target.classList.contains('word')) {
+        const text = event.target.value;
+        const myData = event.target.getAttribute("data-word");
+        const matchingElements = document.querySelectorAll(`.word[data-word='${myData}']`);
 
-            matchingElements.forEach(matchingElement => {
-                matchingElement.value = text;
-            });
-        }
-    }, true);
+        matchingElements.forEach(matchingElement => {
+            matchingElement.value = text;
+        });
+    }
+}, true);
 
 
     function checkTexts(event)
