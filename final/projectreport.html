@@ -96,6 +96,29 @@
                 <figcaption>Line 56 has code that goes unused. Oops.</figcaption>
             </figure>
 
+            <p>
+                Kevin pointed out my event listener loop could be revamped for better performance. 
+            </p>
+
+            <figure>
+                <img src="images/eventdelegation-before.png" alt="Without Event Delegation">
+                <figcaption>This section of code stops the browser from verifying input fields on the back side of the card.</figcaption>
+            </figure>
+
+            <p>Instead of one listener per input, he recommended attaching a single listener to the parent element. This "event delegation" technique cuts code length and boosts flexibility, letting me add new fields with minimal fuss.
+            </p>
+
+            <figure>
+                <img src="images/eventdelegation-after.png" alt="With Event Delegation">
+                <figcaption>The same code using Event Delegation</figcaption>
+            </figure>
+
+            <p>
+                Overall, Kevin's advices and techniques made my improved MadLibs worthy of the "2.0" version. It's a whole lot cleaner and concise, making it more flexible for future features while making it less
+                prone to bugs. I've also added a few tweaks here and there with the page's layout so that the game is more accessible. I am thankful for his efforts and expertise to guide me through building a
+                better Mad Libs. 
+            </p>
+
         </article> <!-- End of in-article content -->
     </section> <!-- End of in article section -->
 

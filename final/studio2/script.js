@@ -3,21 +3,6 @@
     /* javascript that implements the mad lib game */
     
     var wordElements = document.querySelectorAll(".word.fillable");
-
-    /*wordElements.forEach(function(element) 
-    {
-        element.addEventListener('blur', function() 
-        {
-            var text = this.value;
-            var myData = this.getAttribute("data-word");
-            var matchingElements = document.querySelectorAll(".word[data-word='" + myData + "']");
-            
-            matchingElements.forEach(function(matchingElement) {
-                matchingElement.value = text;
-            });
-        });
-        element.addEventListener('keyup', checkTexts);
-    });*/
     
     document.addEventListener('blur', function(event) {
     // Check if event.target is an element and has a classList
@@ -31,6 +16,8 @@
         });
     }
 }, true);
+    
+    document.addEventListener('keyup', checkTexts);
 
 
     function checkTexts(event)
