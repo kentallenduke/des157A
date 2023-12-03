@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.svg">
+    <title>Debrief - Finalizing MadLibs 2.0</title>
+</head>
+<body>
+    <header>
+        <section id="banner">
+            <div id="banner-elements">
+                <!-- Debrief logo -->
+                <div class="logo">
+                    <a href="https://kentallenduke.github.io/kent-portal/final/processwork.html">
+                        <img src="images/logo.svg" alt="logo" width="250" height="92">
+                    </a>
+                    <!-- Navigation - Github --> 
+                    <a href="https://github.com/kentallenduke/kent-portal" class="github">
+                        <img src="images/github-dark.svg" alt="github" >
+                    </a>
+                </div>            
+            </div>
+        </div>
+        </section>
+    </header>
+
+            <script>
+
+            // When the user scrolls the page, execute myFunction
+        window.onscroll = function() {
+            myFunction()
+        };
+        
+        // Get the navbar
+        var banner = document.getElementById("banner");
+        
+        // Get the offset position of the navbar
+        var sticky = banner.offsetTop;
+        
+        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+            
+          if (window.pageYOffset >= sticky) {
+            banner.classList.add("sticky")
+          } 
+          
+          else {
+            banner.classList.remove("sticky");
+          }
+}
+            </script>
+
+    <section id="in-article">
+        <article id="in-article-content">
+            <p><img src="images/madlibs-research-hero.jpg" alt="MadLibs Process Work Hero"></p>
+            <time datetime="2023-12-02">DEC 02 2023</time>
+            <h1>Report: Finalizing MadLibs 2.0</h1>
+            
+            <p> For my final project, I collaborated with Kevin Duke for a code review of the Flip button feature in my
+                Mad Libs assignment. To recap, I'm enhancing the Flip button's functionality. A frequent issue noted was the ability 
+                of players to flip the index card without completing all input fields. This enhancement is more complex than it appears, 
+                requiring checks to ensure all input fields are filled before flipping the card and preventing field checks on the card's 
+                reverse side.
+            </p>
+
+            <p> Kevin Duke's expertise in code review and UI/UX suggestions is invaluable. With over five years in the frontend development 
+                sector, creating professional websites from scratch, his skills in programming and usability studies are exceptional, surpassing
+                many of his peers. Thus, his insights and review for the flip button coding are highly beneficial.
+            </p>
+            <h2>Discussion</h2>
+            <p>
+                Upon sharing my code with Kevin, he remarks that my javascript for the new flip button and input check logic is clean. There are not
+                that many things that need to be refactored. But he suggested that I use let and const Instead of var. Modern JavaScript encourages 
+                the use of let and const for variable declarations to avoid hoisting issues and to make the code more readable. 
+            </p>
+
+            <figure>
+                <img src="images/checktext-for.jpg" alt="Optimizing the for loop">
+                <figcaption>I should be using let, not var, inside this check text event function.</figcaption>
+            </figure>
+          
+            <p>
+                Line 56 contains code that goes unused. I was experimenting with different button states, but I forgot to remove it. Removing it improves code 
+                efficiency as it doesn't have to parse this state.
+            </p>
+            
+            <figure>
+                <img src="images/unused-element.jpg" alt="Unused syntax">
+                <figcaption>Line 56 has code that goes unused. Oops.</figcaption>
+            </figure>
+
+        </article> <!-- End of in-article content -->
+    </section> <!-- End of in article section -->
+
+    <footer>
+        <section class="footer-content">
+            <p> Designed by Kent Duke</p>
+        </section>
+    </footer>
+</body>
+</html>

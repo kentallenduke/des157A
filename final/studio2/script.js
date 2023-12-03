@@ -21,7 +21,7 @@
 
     function checkTexts(event)
     {
-        for(let tboxes of wordElements)
+        for(var tboxes of wordElements)
         {
             if(tboxes.value.length == 0 || tboxes.value.length == NaN)
             {
@@ -53,10 +53,10 @@
 
     /*Javascript to flip the card*/
         
-    //document.getElementById('flipBtn').style.visibility = 'visible';
     document.getElementById('flipBtn').onclick = function(e) {
         if(e.target.parentElement.classList.contains("disabledBtn") || e.target.classList.contains("disabledBtn"))
             return false;
+        
         document.getElementById('cardarea').classList.toggle('do-flip');
         const icon = this.querySelector('.rotate-icon');
         icon.classList.toggle('rotate');
@@ -65,15 +65,3 @@
   
     
 })();
-
-// $(".word").on('blur', function(){
-//     var text = $(this).val();
-//     var myData = $(this).data("word");
-//     $(".word[data-word="+myData+"]").val( text );
-// });
-
-//$("#flip").click(function(){
-    //$("#cardarea").toggleClass("flipped");
-//});
-
-
